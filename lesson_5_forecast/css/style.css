@@ -40,8 +40,11 @@ a{
 	display: block;
 	margin-top: 1em;
 }
-.city_list li a:hover{
+.city_list:hover li a {
 	opacity: .5;
+}
+.city_list li a:hover{
+	opacity: 1;
 }
 .city_list .small {
 	width: 25%;
