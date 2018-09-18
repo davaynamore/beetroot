@@ -1,0 +1,155 @@
+/*
+/////MAP//////
+//#COMMON
+//#SEARCH
+//#COLUMNS
+//////////////
+*/
+
+
+/*#COMMON*/
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	transition: all .1s ease;
+}
+
+html, body {
+	width: 100%;
+	height: 100vh;
+	font-size: 100%;
+	font-family: Arial, sans-serif;
+}
+
+.grey {
+	color: #c2c2c2;
+}
+
+.bg_grey {
+	background-color: #F1F1F1;
+}
+
+::-webkit-input-placeholder {
+	color: #c2c2c2;
+}
+
+::-moz-placeholder {
+	color: #c2c2c2;
+}
+
+:-moz-placeholder {
+	color: #c2c2c2;
+}
+
+:-ms-input-placeholder {
+	color: #c2c2c2;
+}
+
+.content {
+	background-color: #F1F1F1;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding-top: 3em;
+	/* border: 1px solid black; */
+}
+
+/*#SEARCH*/
+.search {
+	position: relative;
+}
+
+.search > * {
+	position: absolute;
+	top: 0;
+	font-size: 5rem;
+}
+
+.search__input {
+	border: none;
+	font-weight: bold;
+	color:  #ec5a62;
+	left: 0;
+	width: 90.4%;
+	outline: none;
+
+	/* background-color: blue; */
+}
+
+.search__button {
+	border: none;
+	background: url('../img/magnifier.svg') no-repeat 0 0;
+	cursor:  pointer;
+	right: 0;
+	width: 92px;
+
+	/* background-color: red; */
+}
+
+/*#COLUMNS*/
+.columns {
+	padding-top: 10em;
+}
+
+.column {
+	width: 30%;
+	display: inline-block;
+	font-size: 0;
+	margin-right: 2.7rem;
+}
+
+.column:first-child img{
+	border-radius: 50%;
+	min-width: 50px;
+	min-height: 50px;
+}
+
+.column img{
+	min-width: 50px;
+	min-height: 50px;
+}
+
+.column:last-child {
+	margin-right: 0;
+}
+
+.column__heading {
+	text-transform: uppercase;
+	font-size: .9rem;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+
+.column__list {
+	list-style: none;
+	font-size: 1rem;
+}
+
+.column__list li {
+	margin-bottom: 5px;
+}
+
+.column__list a {
+	display: block;
+	background: rgba(118,117,128,0.05);
+	text-decoration: none;
+	padding: 5px;
+	font-size: .8rem;
+	position: relative;
+}
+
+.column__list a:hover {
+	background: rgba(118,117,128,0.1);
+	color:  #ec5a62;
+}
+
+.column__list a span {
+	position: absolute;
+	display: block;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 70px;
+}

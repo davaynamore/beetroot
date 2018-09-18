@@ -1,0 +1,105 @@
+*,*:before,*:after{
+	box-sizing: border-box;
+	transition: all .1s ease-in;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+}
+body{
+	margin: 0;
+	border: 1em solid #2B81AC;
+	background: #3399CC;
+	color: white;
+}
+a{
+	color: white;
+	text-decoration: none;
+	display: block;
+	font-size: 24px;
+	padding: 1em 0;
+}
+.content{
+	max-width: 960px;
+	margin: auto;
+}
+.city_list {
+	padding: 0;
+	font-size: 0;
+	border: 3px solid white;
+}
+.city_list li{
+	display: inline-block;
+	text-align: center;
+	border-color: white;
+	border: 3px solid white;
+}
+.city_list li a span{
+	display: block;
+	margin-top: 1em;
+}
+.city_list li a:hover{
+	opacity: .5;
+}
+.city_list .small {
+	width: 25%;
+}
+
+.city_list .half {
+	width: 50%;
+}
+
+.city_list .full {
+	width: 100%;
+}
+
+.wi{
+	margin-left: .5em;
+	font-size: 1.3em;
+}
+
+.blue{
+	background: #3399CC;
+}
+
+.turquoise{
+	background: #33CCCC;
+}
+
+.purple{
+	background: #996699;
+}
+
+.red{
+	background: #C24747;
+}
+
+.orange{
+	background: #E2674A;
+}
+
+.yellow{
+	background: #FFCC66;
+}
+
+.lightgreen{
+	background: #99CC99;
+}
+
+.darkgreen{
+	background: #669999;
+}
+
+.pink{
+	background: #CC6699;
+}
+
+.green{
+	background: #339966;
+}
+
+.violet{
+	background: #666699
+}
