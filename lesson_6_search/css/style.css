@@ -101,7 +101,6 @@ html, body {
 .column {
 	width: 30%;
 	display: inline-block;
-	font-size: 0;
 	margin-right: 2.7rem;
 }
 
@@ -134,6 +133,7 @@ html, body {
 
 .column__list li {
 	margin-bottom: 5px;
+	min-height: 63px;
 }
 
 .column__list a {

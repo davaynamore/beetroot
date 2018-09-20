@@ -29,6 +29,7 @@ a{
 	padding: 0;
 	font-size: 0;
 	border: 3px solid white;
+	background-color: white;
 }
 .city_list li{
 	display: inline-block;
@@ -39,6 +40,10 @@ a{
 .city_list li a span{
 	display: block;
 	margin-top: 1em;
+	color: rgba(255,255,255,.7);
+}
+.city_list li a span i {
+	color: white;
 }
 .city_list:hover li a {
 	opacity: .5;
