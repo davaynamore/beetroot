@@ -8,6 +8,13 @@
 
 
 /*#COMMON*/
+
+@font-face {
+	font-family: 'Roboto', sans-serif;
+	src: url("../font/Roboto/Roboto-Regular.ttf");
+	font-weight: normal;
+}
+
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -19,7 +26,7 @@ html, body {
 	width: 100%;
 	height: 100vh;
 	font-size: 100%;
-	font-family: Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
 }
 
 .grey {
@@ -63,17 +70,15 @@ html, body {
 }
 
 .search > * {
-	position: absolute;
-	top: 0;
 	font-size: 5rem;
+	display: inline-block;
 }
 
 .search__input {
 	border: none;
 	font-weight: bold;
-	color:  #ec5a62;
-	left: 0;
-	width: 90.4%;
+	color: #ec5a62;
+	width: 90%;
 	outline: none;
 
 	/* background-color: blue; */
@@ -83,7 +88,6 @@ html, body {
 	border: none;
 	background: url('../img/magnifier.svg') no-repeat 0 0;
 	cursor:  pointer;
-	right: 0;
 	width: 92px;
 
 	/* background-color: red; */
