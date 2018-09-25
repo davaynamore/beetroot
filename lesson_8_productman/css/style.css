@@ -110,7 +110,7 @@ ul {
 	float: left;
 }
 
-.logo span{
+.logo > *{
 	font-size: 48px;
 	letter-spacing: 1px;
 	line-height: 27px;
