@@ -265,10 +265,6 @@ ul {
 	transition: all .2s ease;
 }
 
-.goods__list-item:hover {
-	box-shadow: 1px 1px 10px 1px rgba(0,0,0,.5);
-}
-
 .goods__list-item:first-child {
 	width: 685px;
 }
@@ -276,30 +272,50 @@ ul {
 .goods__item {
 	display: block;
 	height: 385px;
+	position: relative;
 }
 
-.goods__item.empty {
+.goods__item:after {
+	content: "";
 	background: #e10011;
-	padding: 35px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 1;
+}
+
+.goods__hover {
+	position: absolute;
+	z-index: 2;
+	bottom: 60px;
+	padding-left: 35px;
 	font-family: "Roboto";
 	font-weight: 900;
 	font-size: 30px;
 	color: #fff;
-	position: relative;
+	opacity: 0;
 }
 
-.goods__item.empty span {
-	position: absolute;
-	bottom: 60px;
-}
-
-.goods__item.empty span:after {
+.goods__hover:after {
 	content: "";
 	display: block;
 	position: relative;
 	width: 90px;
 	top: 10px;
 	border-bottom: 5px solid #fff;
+}
+
+.goods__item:after,
+.goods__item .goods__hover {
+	transition: opacity .5s ease;
+}
+
+.goods__item:hover:after,
+.goods__item:hover .goods__hover {
+	opacity: 1;
 }
 
 .goods__img {
@@ -432,3 +448,10 @@ label[for="submit"]{
 .company-name {
 	color: #303030;
 }
+
+/* header,
+section,
+footer {
+	background: red!important;
+	border: 1px solid black!important;
+} */
