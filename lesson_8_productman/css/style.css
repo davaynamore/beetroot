@@ -444,15 +444,15 @@ label[for="submit"]{
 	font-size: 36px;
 	text-shadow: 
 		-1px -1px 1px #979797,
-		-2px -2px 1px #979797,
-		-3px -3px 1px #979797,
-		-4px -4px 1px #979797,
-		-5px -5px 1px #979797,
-		-6px -6px 1px #979797,
-		-7px -7px 1px #979797,
-		-8px -8px 1px #979797,
-		-9px -9px 1px #979797,
-		-10px -10px 1px #979797;
+		-2px -1px 1px #979797,
+		-3px -2px 1px #979797,
+		-4px -2px 1px #979797,
+		-5px -3px 1px #979797,
+		-6px -3px 1px #979797,
+		-7px -4px 1px #979797,
+		-8px -4px 1px #979797,
+		-9px -5px 1px #979797,
+		-10px -5px 1px #979797;
 }
 
 .social__link:hover {
@@ -472,18 +472,18 @@ label[for="submit"]{
 }
 
 .social__link:hover.social__link--m:after {
-	color: #979797;
+	color: #e3e3e3;
 	text-shadow: 
-		-1px -1px 1px #e3e3e3,
-		-2px -2px 1px #e3e3e3,
-		-3px -3px 1px #e3e3e3,
-		-4px -4px 1px #e3e3e3,
-		-5px -5px 1px #e3e3e3,
-		-6px -6px 1px #e3e3e3,
-		-7px -7px 1px #e3e3e3,
-		-8px -8px 1px #e3e3e3,
-		-9px -9px 1px #e3e3e3,
-		-10px -10px 1px #e3e3e3;
+		-1px -1px 1px #ffffff,
+		-2px -1px 1px #ffffff,
+		-3px -2px 1px #ffffff,
+		-4px -2px 1px #ffffff,
+		-5px -3px 1px #ffffff,
+		-6px -3px 1px #ffffff,
+		-7px -4px 1px #ffffff,
+		-8px -4px 1px #ffffff,
+		-9px -5px 1px #ffffff,
+		-10px -5px 1px #ffffff;
 }
 
 /* #FOOTER */
