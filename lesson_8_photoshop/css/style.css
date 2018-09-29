@@ -1,0 +1,157 @@
+/* MAP
+//#COMMON
+//#HEADER
+//#CONTACTS
+
+ 
+ .contacts input,
+ .contacts textarea {
+	display: block;
+ 	}*/
+
+ /* #COMMON */
+ *{
+ 	transition: all .1 ease;
+ }
+
+@font-face {
+	font-family: "Big John";
+	src: url("../fonts/BigJohn.otf");
+}
+
+@font-face {
+	font-family: "Slim Joe";
+	src: url("../fonts/Slim+Joe.otf");
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+}
+
+.button {
+	font-family: "Slim Joe";
+	background: none;
+	border: 2px solid;
+	border-radius: 2px;
+	text-align: center;
+	padding: 10px 25px;
+	display: block;
+	margin: 0 auto;	
+	cursor: pointer;
+}
+
+.green_color {
+	color: #48bf72;
+}
+
+/* #HEADER */
+
+.upper_row {
+	margin-bottom: 150px;
+}
+
+.main_header {
+	padding-top: 35px;
+	padding-bottom: 180px;
+	background: #fff url("../img/header-img.jpg") no-repeat 0 0;
+	background-size: cover;
+	position: relative;
+	color: #fff;    
+}
+
+.main_header:after{
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(60,73,85,.8);
+}
+
+.logo a{
+	display: block;
+}
+
+.header_menu {
+	float: right;
+	line-height: 4;
+}
+
+.header_menu ul {
+	list-style: none;
+}
+
+.logo,
+.header_menu,
+.header_menu ul li {
+	display: inline-block;
+}
+
+.header_menu ul li:not(:last-child):after{
+	content: "/";
+	display: inline-block;
+	margin: 0 55px;
+}
+
+.header_menu ul li a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 2px solid transparent;
+	padding-bottom: .5em;
+}
+
+.header_menu ul li a:hover{
+	color: #48bf72;
+	border-color: #48bf72;
+}
+
+.main_header h1,
+.main_header h2 {
+	text-align: center;
+	margin-top: 0;
+}
+
+.main_header h1 {
+	font-family: "Big John";
+	font-size: 46px;	
+}
+
+.main_header h2 {
+	font-family: "Slim Joe";
+	font-size: 30px;
+	margin-bottom: 35px;
+}
+
+.main_header .button {
+	text-transform: uppercase;
+	border-color: #48bf72;
+	color: #48bf72;
+}
+
+.main_header .button:hover {
+	background-color: #48bf72;
+	color: #fff;
+}
+
+/* #CONTACTS */
+.triangle{
+	width: 50px;
+	height: 50px;
+	/* background: #000; */
+}
+
+.triangle:before{
+	content: "";
+	display: inline-block;
+	border: 20px solid transparent;
+	border-left-color: black;
+}
