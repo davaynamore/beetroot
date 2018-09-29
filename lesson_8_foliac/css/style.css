@@ -1,0 +1,421 @@
+/*
+********MAP********
+*******************
+****#COMMON
+****#PORTFOLIO
+****#CONTACTS
+****#FOOTER
+*******************
+********MAP********
+*/
+
+/* #COMMON */
+@font-face {
+	font-family: "Big John";
+	src: url("../fonts/BigJohn.otf");
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: "Slim Joe";
+	src: url("../fonts/Slim+Joe.otf");
+}
+
+* {
+	box-sizing: border-box;
+	transition: all .2s ease;
+}
+
+html, body {
+	width: 100%;
+	height: 100vh;
+	font-family: 'Lato', sans-serif;
+	font-size: 100%;
+	line-height: 1.2;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+figure {
+	margin: 0;
+}
+
+h2 {
+	margin: 0;
+}
+
+.cf {
+	clear: both;
+}
+
+.cf::before,
+.cf::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	max-width: 1140px;
+	margin: auto;
+}
+
+/* #PORTFOLIO */
+
+.portfolio {
+	padding: 50px 0 90px;
+}
+
+.navigation {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.navigation__item {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.navigation__item:last-child {
+	margin-right: 0;
+}
+
+.navigation__link {
+	display: block;
+	padding: 5px 15px;
+	border-radius: 3px;
+	text-align: center;
+	color: #3c4955;
+	font-weight: bold;
+	background-color: #eaeaea;
+}
+
+.navigation__link:hover,
+.navigation__link--active {
+	color: #fff;
+	background-color: #48bf72;
+}
+
+.grid {
+
+}
+
+.grid__list {
+	max-height: 825px;
+}
+
+.grid__list:first-child{
+	max-width: 450px;
+	float: left;
+}
+
+.grid__list:last-child{
+	max-width: 650px;
+	float: right;
+}
+
+.grid__item:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.grid__link {
+	display: block;
+	position: relative;
+	font-size: 0;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.grid__link figcaption {
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 30px;
+	z-index: 2;
+}
+
+.grid__link figcaption span {
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.grid__link::after{
+	content: "";
+	display: block;
+	background-color: rgba(72,191,114, .8);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.grid__link figcaption,
+.grid__link::after {
+	opacity: 0;
+	position: absolute;
+	transition: opacity .3s ease;
+}
+
+.grid__link:hover figcaption,
+.grid__link:hover::after {
+	opacity: 1;
+}
+
+/* #CONTACTS */
+
+.contacts {
+	padding: 50px 0;
+}
+
+.contacts__heading {
+	color: #48bf72;
+	font-family: "Big John";
+	font-size: 26px;
+	text-align: center;
+	margin-bottom: 55px
+}
+
+.contacts__form {
+	font-size: 0;
+	max-width: 700px;
+	margin: auto;
+}
+
+.contacts__form input,
+.contacts__form textarea {
+	font-size: 16px;
+}
+
+.user__field {
+	display: inline-block;
+	position: relative;
+	width: 47%;
+}
+
+.user__field--textarea {
+	width: 100%;
+}
+
+.user__field:first-child{
+	float: left;
+}
+
+.user__field:nth-child(2){
+	float: right;
+}
+
+.user__field > * {
+	float: left;
+	border: 2px solid #3c4955;
+	margin-bottom: 30px;
+}
+
+.user__field input {
+	min-width: calc(100% - 50px);
+	min-height: 50px;
+	padding-left: 25px;
+}
+
+.user__field input,
+.user__field textarea {
+	border-radius: 3px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.user__field textarea {
+	padding: 15px 15px 15px 25px;
+	width: calc(100% - 50px);
+}
+
+.user__field textarea,
+label[for="textarea"] {
+	min-height: 225px;
+}
+
+
+label {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: #3c4955;
+	position: relative;
+	border-radius: 3px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+label::after {
+	content: "";
+	display: block;
+	position: absolute;
+	border: 15px solid transparent;
+	border-left-color: #3c4955;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -26px;
+}
+
+label[for="textarea"]::after{
+	top: 25px;
+}
+
+input[type="submit"]{
+	display: block;
+}
+
+label[for="name"] {
+	background-image: url("../img/user.svg");
+}
+
+label[for="email"] {
+	background-image: url("../img/mail.svg");
+}
+
+label[for="textarea"] {
+	background-image: url("../img/crayon.svg");
+	background-position: 50% 7%;
+}
+
+input.contacts__submit {
+	width: 100%;
+	background-color: #48bf72;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 15px 0;
+	border: none;
+	border-radius: 3px;
+	letter-spacing: 3px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+
+/* #FOOTER */
+.main-footer {
+	padding: 70px 0;
+	background-color: #3c4955;
+	color: #fff;
+}
+
+.copyrights {
+	float: left;
+}
+
+.copyrights a {
+	color: #fff;
+}
+
+.socials {
+	float: right;
+}
+
+.socials__item {
+	display: inline-block;
+	margin-right: 40px;
+}
+
+.socials__item:last-child {
+	margin-right: 0;
+}
+
+.socials__link {
+	display: block;
+	width: 50px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border-radius: 3px;
+	position: relative;
+}
+
+.socials__link::before,
+.socials__link::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+}
+
+.socials__link::before {
+	top: -14px;
+	border-bottom: 15px solid;
+}
+
+.socials__link::after {
+	bottom: -14px;
+	border-top: 15px solid;
+}
+
+.socials__link.tw {
+	background-image: url("../img/twitter.svg");
+	background-color: #55abed;
+}
+
+.socials__link.tw::before {
+	border-bottom-color: #55abed;
+}
+
+.socials__link.tw::after {
+	border-top-color: #55abed;
+}
+
+.socials__link.ln {
+	background-image: url("../img/linkedin.svg");
+	background-color: #0975b3;
+}
+
+.socials__link.ln::before {
+	border-bottom-color: #0975b3;
+}
+
+.socials__link.ln::after {
+	border-top-color: #0975b3;
+}
+
+.socials__link.db {
+	background-image: url("../img/dribbble.svg");
+	background-color: #e94b89;
+}
+
+.socials__link.db::before {
+	border-bottom-color: #e94b89;
+}
+
+.socials__link.db::after {
+	border-top-color: #e94b89;
+}
+
+.socials__link.be {
+	background-image: url("../img/behance.svg");
+	background-color: #1769ff;
+}
+
+
+.socials__link.be::before {
+	border-bottom-color: #1769ff;
+}
+
+.socials__link.be::after {
+	border-top-color: #1769ff;
+}
