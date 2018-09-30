@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header class="main_header">
+	<header class="main-header">
 		<div class="container">
 			<div class="upper_row">
 				<div class="logo">
@@ -18,7 +18,7 @@
 						<img src="img/logo.png" alt="logo">
 					</a>					
 				</div>
-				<nav class="header_menu">
+				<nav class="header__menu">
 					<ul>
 						<li><a href="#">item1</a></li>
 						<li><a href="#">item2</a></li>
@@ -28,9 +28,11 @@
 				</nav>
 			</div>
 
-			<h1>Lorem ipsum dolor sit amet.</h1>
-			<h2>Lorem ipsum dolor sit amet</h2>
-			<button class="button">mes travaux</button>
+			<div class="main-header__content">
+				<h1>Lorem ipsum dolor sit amet.</h1>
+				<h2>Lorem ipsum dolor sit amet</h2>
+				<button class="button button--green">mes travaux</button>
+			</div>
 		</div>
 	</header>
 
@@ -90,9 +92,45 @@
 					</li>
 				</ul>
 			</div>
-
-
 		</div>
+	</section>
+
+	<section class="about">
+		<div class="container cf">
+			<div class="author">
+				<h2>Lorem ipsum</h2>
+				<p class="author__description">Lorem ipsum dolor</p>
+				<p class="author__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta maiores nemo, aliquid! Officia voluptates sapiente saepe velit ad eaque, vitae, maxime inventore excepturi cupiditate tempore itaque eos? Sed ullam sapiente nisi perferendis laborum eius excepturi non numquam quae aperiam, sequi corporis dolores quidem ducimus quos saepe cupiditate placeat sunt repellendus!</p>
+				<a href="#contacts" class="button button--grey">Lorem ipsum</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="contacts" class="contacts">
+		<div class="contacts__heading">
+			<h2>Me contacter</h2>
+		</div>
+		<form class="contacts__form">
+
+			<div class="row cf">
+				<div class="user-input">
+					<label class="contacts__label" for="name"></label>
+					<input class="contacts__input" type="text" id="name" placeholder="Votre nom">
+				</div>
+				<div class="user-input">
+					<label class="contacts__label" for="email"></label>
+					<input class="contacts__input" type="email" id="email" placeholder="Votre email">
+				</div>
+			</div>
+
+			<div class="row cf">
+				<div class="user-textarea">
+					<label class="contacts__label" for="message"></label>
+					<textarea class="contacts__textarea" name="message" id="message" placeholder="Votre message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni quidem, cupiditate harum ratione tempore, minima omnis repellendus officiis architecto, laudantium a quaerat fuga neque, recusandae tempora. Deserunt harum eos, sed, quibusdam aspernatur ab quae. Accusamus voluptas est, ipsa laudantium officiis sequi. Dolorum nesciunt, odit tenetur. Tempore eligendi minus consequatur saepe, autem ut laudantium. Mollitia explicabo corporis ad iusto quibusdam ratione reiciendis tempora nesciunt inventore unde recusandae sunt, quaerat, ipsam quasi dolor nulla dignissimos non distinctio beatae maxime, reprehenderit sed. Corporis, blanditiis porro omnis laborum vero eaque explicabo aut aliquam culpa beatae, esse rerum, cupiditate iusto. Impedit amet, harum voluptas autem delectus unde sit alias, suscipit nesciunt, atque officia nulla optio, reprehenderit veritatis praesentium ad corrupti vero vitae provident necessitatibus recusandae doloribus! Est, repellendus. Fugit tenetur, aperiam at commodi natus corporis, iusto dignissimos ad atque itaque est minus laborum in rerum aspernatur molestias omnis qui! Impedit, a. Sint nihil facere obcaecati. Perspiciatis possimus repellat dignissimos, eligendi ducimus odio ipsa, dolores necessitatibus illum voluptates modi dolore dolor nesciunt, non a error, eaque laboriosam veniam. Totam enim minus consectetur, ratione, nulla ex soluta temporibus nostrum hic itaque odio quidem harum voluptates omnis nisi modi accusamus veniam, possimus. Voluptatibus possimus, officia magnam earum.</textarea>
+				</div>
+			</div>
+
+		</form>
 	</section>
 </body>
 </html>
