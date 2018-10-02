@@ -50,9 +50,10 @@ body::after {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: transparent url("../img/bg_t.jpg") no-repeat;
+	background: transparent url("../img/bg_t.png") no-repeat;
 	background-size: cover;
 	z-index: -1;
+	opacity: .4;
 }
 
 a {
