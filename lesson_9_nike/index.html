@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Nike Product Card</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+
+		<header class="main-header cf">
+			<div class="logo">
+				<a class="logo__link"href="/">
+					<img src="img/logo.svg" alt="Nike logo" class="logo__img">
+				</a>
+			</div>
+			<ul class="tabs">
+				<li class="tabs__item"><a href="#" class="tabs__link">lifestyle</a></li>
+				<li class="tabs__item"><a href="#" class="tabs__link tabs__link--active">running</a></li>
+				<li class="tabs__item"><a href="#" class="tabs__link">football</a></li>
+				<li class="tabs__item"><a href="#" class="tabs__link">skateboarding</a></li>
+			</ul>
+			<div class="drop">
+				<div class="drop__button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<ul class="drop__menu">
+					<li class="drop__menu-item"><a href="#" class="drop__menu-link">item1</a></li>
+					<li class="drop__menu-item"><a href="#" class="drop__menu-link">item2</a></li>
+					<li class="drop__menu-item"><a href="#" class="drop__menu-link">item3</a></li>
+				</ul>
+			</div>
+		</header>
+
+	</div>
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		;(()=>{
+			let tabsLinks = document.querySelectorAll('.tabs__link');
+			let dropButton = document.querySelectorAll('.drop__button')[0];
+
+			document.onmousedown = (e) => {
+				let target = e.target;
+
+				if(target.classList.contains('tabs__link')) {
+					let className = 'tabs__link--active';
+					Array.prototype.forEach.call(tabsLinks, (tab) => {
+						tab.classList.remove(className);
+					});
+					target.classList.add(className);
+				}
+
+				if(target.classList.contains('drop__button')) {
+					dropButton.classList.toggle('drop__button--open')
+				}
+			}
+		})();
+	</script>
+
+
+
+
+
+</body>
+</html>

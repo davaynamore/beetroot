@@ -1,0 +1,188 @@
+/*
+***********MAP***********
+*****#COMMON
+*****#HEADER
+***********MAP***********
+*/
+
+
+/* #COMMON */
+* {
+	box-sizing: border-box;
+}
+
+.cf {
+	clear: both;
+}
+
+.cf::before,
+.cf::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	letter-spacing: 0;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 875px;
+	padding: 30px 65px 90px;
+	z-index: 0;
+
+	background: rgba(101,61,151,1);
+	background: -moz-linear-gradient(left, rgba(101,61,151,1) 0%, rgba(172,113,175,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(101,61,151,1)), color-stop(100%, rgba(172,113,175,1)));
+	background: -webkit-linear-gradient(left, rgba(101,61,151,1) 0%, rgba(172,113,175,1) 100%);
+	background: -o-linear-gradient(left, rgba(101,61,151,1) 0%, rgba(172,113,175,1) 100%);
+	background: -ms-linear-gradient(left, rgba(101,61,151,1) 0%, rgba(172,113,175,1) 100%);
+	background: linear-gradient(to right, rgba(101,61,151,1) 0%, rgba(172,113,175,1) 100%);
+}
+
+.container::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: transparent url("../img/bg_t.png") no-repeat;
+	background-size: cover;
+	z-index: 0;
+}
+
+.container > * {
+	position: relative;
+	z-index: 1;
+}
+
+.text-purple {
+	color: #5e4fff;
+}
+
+.button--purple {
+	background-color: #a200b8;
+	color: #fff;
+}
+
+.bg-orange {
+	background-color: #ffa60d;
+}
+
+/* #HEADER */
+.main-header {
+	text-align: center;
+}
+
+.logo {
+	float: left;
+}
+
+.logo__link {
+	display: block;
+}
+
+.tabs {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.tabs__item {
+	display: inline-block;
+	margin-right: 50px;
+}
+
+.tabs__item:last-child {
+	margin-right: 0;
+}
+
+.tabs__link {
+	display: block;
+	padding: 5px 0;
+	text-transform: uppercase;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom-color .3s ease;
+}
+
+.tabs__link:hover,
+.tabs__link--active {
+	border-bottom-color: #fff;
+}
+
+.drop {
+	float: right;
+	cursor: pointer;
+	position: relative;
+}
+
+.drop__button {
+	width: 22px;
+	height: 22px;
+	padding: 5px 0;
+}
+
+.drop__button > * {
+	display: block;
+	position: relative;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+.drop__button > *:last-child {
+	margin-bottom: 0;
+}
+
+.drop__button--open > *:first-child {
+	transform: rotate(45deg);
+	top: 6px;
+}
+
+.drop__button--open > *:nth-child(2) {
+	transform: rotate(-45deg)
+}
+
+.drop__button--open > *:last-child {
+	display: none;
+}
+
+.drop__menu {
+	display: none;
+	padding: 20px 0;
+	position: absolute;
+}
+
+.drop__button--open + .drop__menu {
+	display: block;
+}
+
+.drop__menu-item {
+	margin-bottom: 10px;
+}
