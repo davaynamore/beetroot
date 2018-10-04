@@ -436,12 +436,6 @@
 	</div>
 
 
-
-
-
-
-
-
 	<script type="text/javascript">
 		;(()=>{
 			let makeActive = (nodesList, activeClassToTarget, target) => {
@@ -476,24 +470,8 @@
 					dropButton.classList.toggle('drop__button--open');
 				}
 
-				if(target.classList.contains('product__card-cross')) {
-					let activeProductTab = target.parentElement.parentElement.parentElement;
-					let activeProductTabClass = 'products-tabs__item--open';
-					tabTrigger(activeProductTab, activeProductTabClass, activeProductTab.parentElement);
-				}
-
 			}
 		})();
-
-		let tabTrigger = (target, activeClass, parent) => {
-			let activeTab = document.querySelectorAll('#' + target.id)[0]
-			target.classList.remove(activeClass);
-			if(target.nextElementSibling){
-				target.nextElementSibling.classList.add(activeClass);
-			} else {
-				parent.firstElementChild.classList.add(activeClass);
-			}
-		}
 
 	</script>
 
