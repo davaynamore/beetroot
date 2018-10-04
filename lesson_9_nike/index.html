@@ -12,30 +12,426 @@
 	<div class="container">
 
 		<header class="main-header cf">
+
 			<div class="logo">
 				<a class="logo__link"href="/">
 					<img src="img/logo.svg" alt="Nike logo" class="logo__img">
 				</a>
 			</div>
+
 			<ul class="tabs">
-				<li class="tabs__item"><a href="#" class="tabs__link">lifestyle</a></li>
-				<li class="tabs__item"><a href="#" class="tabs__link tabs__link--active">running</a></li>
-				<li class="tabs__item"><a href="#" class="tabs__link">football</a></li>
-				<li class="tabs__item"><a href="#" class="tabs__link">skateboarding</a></li>
+				<li class="tabs__item"><a href="#" data-target="#lifestyle" class="tabs__link tabs__link--active">lifestyle</a></li>
+				<li class="tabs__item"><a href="#" data-target="#running" class="tabs__link">running</a></li>
+				<li class="tabs__item"><a href="#football" data-target="#football" class="tabs__link">football</a></li>
+				<li class="tabs__item"><a href="#" data-target="#skateboarding" class="tabs__link">skateboarding</a></li>
 			</ul>
+
 			<div class="drop">
+
 				<div class="drop__button">
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
+
 				<ul class="drop__menu">
 					<li class="drop__menu-item"><a href="#" class="drop__menu-link">item1</a></li>
 					<li class="drop__menu-item"><a href="#" class="drop__menu-link">item2</a></li>
 					<li class="drop__menu-item"><a href="#" class="drop__menu-link">item3</a></li>
 				</ul>
+
 			</div>
+
 		</header>
+
+		<ul class="products-tabs">
+
+			<li class="products-tabs__item products-tabs__item--open" id="lifestyle">
+				<section class="product">
+					<div class="product__card cf">
+
+						<div class="cross product__card-cross"></div>
+
+						<div class="product__img-side">
+
+							<figure class="product__img">
+								<figcaption class="product__caption">huarache</figcaption>
+								<a class="img-wrapper" href="#">
+									<img class="product__pict" src="img/item-1.png">
+								</a>
+								<div class="cross product__img-cross"></div>
+							</figure>
+
+							<ul class="product__thumbs">
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img1.jpg" alt="">
+									</a>
+								</li>
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img2.jpg" alt="">
+									</a>
+								</li>
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img3.jpg" alt="">
+									</a>
+								</li>
+							</ul>
+
+						</div>
+
+						<div class="product__info-side">
+							<form>
+								<div class="label label--orange">new</div>
+
+								<div class="product__slogan">
+									<h1>the <span>lifestyle</span><br /> has just begun</h1>
+								</div>
+
+								<div class="product__rating cf">
+									<p class="product__name">huarache</p>
+									<ul class="rating">
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--empty"></li>
+									</ul>
+								</div>
+
+								<div class="price">
+									<span class="price__currency">$</span><span class="price__value">200</span>
+								</div>
+
+								<div class="product__size">
+									<p>Size</p>
+									<ul class="size-list product__size-list">
+										<li class="size-list__item">
+											<input type="radio" id="size1" name="size">
+											<label class="size-list__label" for="size1">7</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size2" name="size">
+											<label class="size-list__label" for="size2">8</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size3" name="size">
+											<label class="size-list__label" for="size3">9</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size4" name="size">
+											<label class="size-list__label size-list__label--active" for="size4">10</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size5" name="size">
+											<label class="size-list__label" for="size5">11</label>
+										</li>
+									</ul>
+								</div>
+
+								<div class="product__buttons">
+									<button class="btn buy-btn">add to cart</button>
+									<button class="btn wishlist-btn">wishlist</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</section>
+			</li>
+
+			<li class="products-tabs__item" id="running">
+				<section class="product">
+					<div class="product__card cf">
+
+						<div class="cross product__card-cross"></div>
+
+						<div class="product__img-side">
+
+							<figure class="product__img">
+								<figcaption class="product__caption">huarache</figcaption>
+								<a class="img-wrapper" href="#">
+									<img class="product__pict" src="img/img_h.png">
+								</a>
+								<div class="cross product__img-cross"></div>
+							</figure>
+
+							<ul class="product__thumbs">
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img1.jpg" alt="">
+									</a>
+								</li>
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img2.jpg" alt="">
+									</a>
+								</li>
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img3.jpg" alt="">
+									</a>
+								</li>
+							</ul>
+
+						</div>
+
+						<div class="product__info-side">
+							<form>
+								<div class="label label--orange">new</div>
+
+								<div class="product__slogan">
+									<h1>the <span>running</span><br /> has just begun</h1>
+								</div>
+
+								<div class="product__rating cf">
+									<p class="product__name">huarache</p>
+									<ul class="rating">
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--empty"></li>
+									</ul>
+								</div>
+
+								<div class="price">
+									<span class="price__currency">$</span><span class="price__value">200</span>
+								</div>
+
+								<div class="product__size">
+									<p>Size</p>
+									<ul class="size-list product__size-list">
+										<li class="size-list__item">
+											<input type="radio" id="size1" name="size">
+											<label class="size-list__label" for="size1">7</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size2" name="size">
+											<label class="size-list__label" for="size2">8</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size3" name="size">
+											<label class="size-list__label" for="size3">9</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size4" name="size">
+											<label class="size-list__label size-list__label--active" for="size4">10</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size5" name="size">
+											<label class="size-list__label" for="size5">11</label>
+										</li>
+									</ul>
+								</div>
+
+								<div class="product__buttons">
+									<button class="btn buy-btn">add to cart</button>
+									<button class="btn wishlist-btn">wishlist</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</section>
+			</li>
+
+			<li class="products-tabs__item" id="football">
+				<section class="product">
+					<div class="product__card cf">
+
+						<div class="cross product__card-cross"></div>
+
+						<div class="product__img-side">
+
+							<figure class="product__img">
+								<figcaption class="product__caption">huarache</figcaption>
+								<a class="img-wrapper" href="#">
+									<img class="product__pict" src="img/item-2.png">
+								</a>
+								<div class="cross product__img-cross"></div>
+							</figure>
+
+							<ul class="product__thumbs">
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img2.jpg"" alt="">
+									</a>
+								</li>
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img2.jpg" alt="">
+									</a>
+								</li>
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img3.jpg" alt="">
+									</a>
+								</li>
+							</ul>
+
+						</div>
+
+						<div class="product__info-side">
+							<form>
+								<div class="label label--orange">new</div>
+
+								<div class="product__slogan">
+									<h1>the <span>football</span><br /> has just begun</h1>
+								</div>
+
+								<div class="product__rating cf">
+									<p class="product__name">huarache</p>
+									<ul class="rating">
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--empty"></li>
+									</ul>
+								</div>
+
+								<div class="price">
+									<span class="price__currency">$</span><span class="price__value">200</span>
+								</div>
+
+								<div class="product__size">
+									<p>Size</p>
+									<ul class="size-list product__size-list">
+										<li class="size-list__item">
+											<input type="radio" id="size1" name="size">
+											<label class="size-list__label" for="size1">7</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size2" name="size">
+											<label class="size-list__label" for="size2">8</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size3" name="size">
+											<label class="size-list__label" for="size3">9</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size4" name="size">
+											<label class="size-list__label size-list__label--active" for="size4">10</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size5" name="size">
+											<label class="size-list__label" for="size5">11</label>
+										</li>
+									</ul>
+								</div>
+
+								<div class="product__buttons">
+									<button class="btn buy-btn">add to cart</button>
+									<button class="btn wishlist-btn">wishlist</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</section>
+			</li>
+
+			<li class="products-tabs__item" id="skateboarding">
+				<section class="product">
+					<div class="product__card cf">
+
+						<div class="cross product__card-cross"></div>
+
+						<div class="product__img-side">
+
+							<figure class="product__img">
+								<figcaption class="product__caption">huarache</figcaption>
+								<a class="img-wrapper" href="#">
+									<img class="product__pict" src="img/item-3.png">
+								</a>
+								<div class="cross product__img-cross"></div>
+							</figure>
+
+							<ul class="product__thumbs">
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img1.jpg" alt="">
+									</a>
+								</li>
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img2.jpg" alt="">
+									</a>
+								</li>
+								<li class="product__thumbs-item">
+									<a class="product__thumbs-link" href="#">
+										<img src="img/img3.jpg" alt="">
+									</a>
+								</li>
+							</ul>
+
+						</div>
+
+						<div class="product__info-side">
+							<form>
+								<div class="label label--orange">new</div>
+
+								<div class="product__slogan">
+									<h1>the <span>skateboarding</span><br /> has just begun</h1>
+								</div>
+
+								<div class="product__rating cf">
+									<p class="product__name">huarache</p>
+									<ul class="rating">
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--full"></li>
+										<li class="rating__item rating__item--empty"></li>
+									</ul>
+								</div>
+
+								<div class="price">
+									<span class="price__currency">$</span><span class="price__value">200</span>
+								</div>
+
+								<div class="product__size">
+									<p>Size</p>
+									<ul class="size-list product__size-list">
+										<li class="size-list__item">
+											<input type="radio" id="size1" name="size">
+											<label class="size-list__label" for="size1">7</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size2" name="size">
+											<label class="size-list__label" for="size2">8</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size3" name="size">
+											<label class="size-list__label" for="size3">9</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size4" name="size">
+											<label class="size-list__label size-list__label--active" for="size4">10</label>
+										</li>
+										<li class="size-list__item">
+											<input type="radio" id="size5" name="size">
+											<label class="size-list__label" for="size5">11</label>
+										</li>
+									</ul>
+								</div>
+
+								<div class="product__buttons">
+									<button class="btn buy-btn">add to cart</button>
+									<button class="btn wishlist-btn">wishlist</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</section>
+			</li>
+
+		</ul>
+
 
 	</div>
 
@@ -48,25 +444,57 @@
 
 	<script type="text/javascript">
 		;(()=>{
-			let tabsLinks = document.querySelectorAll('.tabs__link');
-			let dropButton = document.querySelectorAll('.drop__button')[0];
+			let makeActive = (nodesList, activeClassToTarget, target) => {
+				Array.prototype.forEach.call(nodesList, (node) => {
+					node.classList.remove(activeClassToTarget);
+				});
+				target.classList.add(activeClassToTarget);
+			};
 
 			document.onmousedown = (e) => {
 				let target = e.target;
 
 				if(target.classList.contains('tabs__link')) {
-					let className = 'tabs__link--active';
-					Array.prototype.forEach.call(tabsLinks, (tab) => {
-						tab.classList.remove(className);
-					});
-					target.classList.add(className);
+					let tabsLinks = document.querySelectorAll('.tabs__link'),
+					productTabsItems = document.querySelectorAll('.products-tabs__item');
+
+					makeActive(tabsLinks,'tabs__link--active', target);
+
+					let tabContentId = target.getAttribute('data-target');
+					target = document.querySelectorAll(tabContentId)[0];
+
+					makeActive(productTabsItems,'products-tabs__item--open', target);
+				}
+
+				if(target.classList.contains('size-list__label')) {
+					let sizeLabels = document.querySelectorAll('.size-list__label');
+					makeActive(sizeLabels, 'size-list__label--active', target);
 				}
 
 				if(target.classList.contains('drop__button')) {
-					dropButton.classList.toggle('drop__button--open')
+					let dropButton = document.querySelectorAll('.drop__button')[0];
+					dropButton.classList.toggle('drop__button--open');
 				}
+
+				if(target.classList.contains('product__card-cross')) {
+					let activeProductTab = target.parentElement.parentElement.parentElement;
+					let activeProductTabClass = 'products-tabs__item--open';
+					tabTrigger(activeProductTab, activeProductTabClass, activeProductTab.parentElement);
+				}
+
 			}
 		})();
+
+		let tabTrigger = (target, activeClass, parent) => {
+			let activeTab = document.querySelectorAll('#' + target.id)[0]
+			target.classList.remove(activeClass);
+			if(target.nextElementSibling){
+				target.nextElementSibling.classList.add(activeClass);
+			} else {
+				parent.firstElementChild.classList.add(activeClass);
+			}
+		}
+
 	</script>
 
 
