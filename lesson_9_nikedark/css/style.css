@@ -109,6 +109,8 @@ ul > li > a {
 .product__img-link > *:last-child {
 	margin-right: auto;
 	margin-left: auto;
+	width: 215px;
+	height: 155px;
 }
 
 .bullets {

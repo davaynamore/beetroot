@@ -13,7 +13,7 @@
 			<div class="product__img-side">
 				<a class="product__img-link" href="#">
 					<img src="img/logo.svg" alt="nike logo">
-					<img src="img/foot.png" alt="nike running shoes">
+					<img id="productImage" src="img/foot.png" alt="nike running shoes">
 				</a>
 				<ul class="bullets">
 					<li class="bullets__item">
@@ -102,5 +102,33 @@
 				</div>
 			</div>
 		</div>
-	</body>
-	</html>
+		<script type="text/javascript">
+			;(() => {
+				let bullets = document.querySelectorAll('.bullets__link');
+
+				let makeActive = (nodesList, activeClassToTarget, target) => {
+					Array.prototype.forEach.call(nodesList, (node) => {
+						node.classList.remove(activeClassToTarget);
+					});
+					target.classList.add(activeClassToTarget);
+				};
+
+				document.onclick = (e) => {
+					let target = e.target;
+					if(!target.classList.contains('bullets__link')) return;
+					makeActive(bullets, 'bullets__link--active', target);
+					if(target.classList.contains('bullets__link--blue')) {
+						productImage.setAttribute('src', 'img/foot_blue.png');
+					} else if (target.classList.contains('bullets__link--white')){
+						productImage.setAttribute('src', 'img/foot_white.png');
+					} else if (target.classList.contains('bullets__link--red')) {
+						productImage.setAttribute('src', 'img/foot_red.png');
+					} else if (target.classList.contains('bullets__link--aqua')) {
+						productImage.setAttribute('src', 'img/foot_aqua.png');
+					}
+				}
+
+		})();
+	</script>
+</body>
+</html>
