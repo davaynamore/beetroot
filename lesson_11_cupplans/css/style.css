@@ -1,0 +1,81 @@
+@font-face {
+	font-family: "Miso";
+	src: url("../fonts/miso.otf");
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100vh;
+}
+
+body {
+	background-color: #fdde7e;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Miso";
+	font-size: 100%;
+	color: #333333;
+}
+
+.container {
+	width: 1140px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card {
+	width: 360px;
+	height: 440px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.card--gold {
+	min-height: 500px;
+}
+
+.card__price {
+	font-size: 70px;
+	letter-spacing: 2px;
+	color: #02995b;
+	font-weight: bold;
+	flex-grow: 3;
+	display: flex;
+	align-items: center;
+}
+
+.card__img {
+	flex-grow: 1;
+}
+
+.card__plan {
+	flex-grow: 2;
+}
+
+.card__plan-name {
+	font-size: 56px;
+	text-transform: capitalize;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+
+.card__descr {
+	font-size: 22px;
+	font-family: 'Lato', sans-serif;
+	max-width: 170px;
+	text-align: center;
+}
