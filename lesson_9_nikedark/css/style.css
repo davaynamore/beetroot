@@ -102,8 +102,8 @@ ul > li > a {
 	font-size: 0;
 }
 
-.product__img-link > * {
-	margin-bottom: 70px;
+.product__img-link > img {
+	margin-bottom: 45px;
 }
 
 .img-wrapper {
