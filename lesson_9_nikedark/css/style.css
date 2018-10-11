@@ -195,11 +195,14 @@ ul > li > a {
 	color: #adafb3;
 }
 
+.options-selects {
+	margin-bottom: 30px;
+}
+
 .options__label {
 	display: inline-block;
 	position: relative;
 	width: 70px;
-	margin-bottom: 30px;
 }
 
 .options__label::after {

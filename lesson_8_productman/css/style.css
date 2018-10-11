@@ -113,14 +113,20 @@ ul {
 .logo > *{
 	font-size: 48px;
 	letter-spacing: 1px;
-	line-height: 27px;
 	font-weight: 900;
 	color: #303030;
+	display: block;
 }
 
 .menu {
 	float: right;
 	position: relative;
+	padding-top: 15px;
+}
+
+.menu__list {
+	display: inline-block;
+	margin-right: 52px;
 }
 
 .menu__list-item {
@@ -132,13 +138,15 @@ ul {
 	margin-right: 52px;
 }
 
-.menu__list-item:last-child {
+.drop-menu__link {
 	cursor: pointer;
 	position: relative;
-	top: 3px;
+	top: 5px;
+	display: block;
+	float: right;
 }
 
-.menu__list-item:last-child span {
+.drop-menu__link span {
 	display: block;
 	border-bottom: 2px solid #000;
 	width: 15px;
@@ -159,13 +167,21 @@ ul {
 
 /* #BANNER */
 .banner {
-	padding: 105px 0 0;
+	padding: 105px 0 90px;
+}
+
+.banner-wrapper {
+	margin-bottom: 90px;
 }
 
 .banner__left-side {
 	float: left;
 	text-align: right;
 	max-width: 50%;
+}
+
+.banner__huge-text {
+	margin-bottom: 1em;
 }
 
 .banner__huge-text > *{
@@ -187,6 +203,7 @@ ul {
 
 .banner__description {
 	font-weight: 300;
+	margin: 0 0 1em;
 }
 
 .banner__link {
@@ -221,7 +238,6 @@ ul {
 .bullets {
 	text-align: center;
 	clear: both;
-	margin: 90px 0;
 }
 
 .bullets__list,
@@ -244,7 +260,7 @@ ul {
 /* #FEATURED */
 .featured {
 	background-color: #fff;
-	padding: 115px 70px 35px;
+	padding: 115px 0 70px;
 }
 
 .featured .underline {
@@ -255,11 +271,15 @@ ul {
 	margin-bottom: 75px;
 }
 
+.goods {
+	max-width: 1060px;
+	margin: auto;
+}
+
 .goods__list-item {
 	float: left;
 	width: 325px;
 	margin-right: 35px;
-	margin-bottom: 35px;
 	overflow: hidden;
 	border-radius: 10px;
 	transition: all .2s ease;
@@ -267,6 +287,11 @@ ul {
 
 .goods__list-item:first-child {
 	width: 685px;
+}
+
+.goods__list-item:first-child,
+.goods__list-item:nth-child(2) {
+	margin-bottom: 35px;
 }
 
 .goods__item {
