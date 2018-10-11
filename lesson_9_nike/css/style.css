@@ -405,12 +405,6 @@ ul {
 	position: relative;
 }
 
-.size-list__item input {
-	position: absolute;
-	z-index: 9;
-	opacity: 0;
-}
-
 .size-list__label {
 	display: block;
 	width: 25px;
@@ -422,6 +416,18 @@ ul {
 	font-size: 15px;
 	position: relative;
 	z-index: 50;
+}
+
+.size-list__label input {
+	position: absolute;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	z-index: -1;
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
 }
 
 .size-list__label--active {
