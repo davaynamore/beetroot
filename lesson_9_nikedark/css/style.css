@@ -140,19 +140,19 @@ ul > li > a {
 	height: 16px;
 }
 
-.bullets__link--blue {
+[data-color="blue"] {
 	background-color: #1f273f;
 }
 
-.bullets__link--white {
+[data-color="white"] {
 	background-color: #fff;
 }
 
-.bullets__link--red {
+[data-color="red"] {
 	background-color: #ed3333;
 }
 
-.bullets__link--aqua  {
+[data-color="aqua"]  {
 	background-color: #29e3ea;
 }
 
