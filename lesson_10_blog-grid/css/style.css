@@ -63,27 +63,38 @@ textarea {
 }
 
 .ba-flex-grid{
-
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .ba-item{
+	max-width: 30%;
+	height: 540px;
+}
+
+.ba-item:first-child{
+	max-width: 60%;	
 }
 .ba-post{
 }
 .ba-post__link{
 	display: block;
 	position: relative;
+	font-size: 0;
 }
 .ba-post__link--abs{
 
 }
 .ba-post__link img {
-	// display: block;
-	// width: 100%;
+	
 }
 .ba-post__body {
 	background: #FFF;
 	padding: 25px 30px;
-
+	height: 290px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .ba-post__body--abs{
 	position: absolute;
@@ -106,9 +117,10 @@ textarea {
 }
 .ba-author{
 	text-decoration: none;
-
+	display: inline-block;
 }
 .ba-author__name{
 	margin: 0 0 0 10px;
 	color: #1D1D1D;
+	display: none;
 }
