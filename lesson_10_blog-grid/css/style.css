@@ -68,12 +68,13 @@ textarea {
 	flex-wrap: wrap;
 }
 .ba-item{
-	max-width: 30%;
+	flex-basis: 32%;
 	height: 540px;
+	margin-bottom: 20px;
 }
 
 .ba-item:first-child{
-	max-width: 60%;	
+	flex-basis: 66%;	
 }
 .ba-post{
 }
@@ -83,7 +84,11 @@ textarea {
 	font-size: 0;
 }
 .ba-post__link--abs{
+	
+}
 
+.ba-post__link--abs img {
+	height: 100%;
 }
 .ba-post__link img {
 	
@@ -91,7 +96,7 @@ textarea {
 .ba-post__body {
 	background: #FFF;
 	padding: 25px 30px;
-	height: 290px;
+	min-height: 290px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -105,7 +110,9 @@ textarea {
 	right: 0;
 	background: linear-gradient(to bottom, transparent, #000);
 	color: #FFF;
-
+	font-size: 13px;
+	display: flex;
+    justify-content: flex-end;
 }
 .ba-post__title {
 	font-size: 22px;

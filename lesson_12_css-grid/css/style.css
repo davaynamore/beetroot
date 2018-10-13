@@ -1,0 +1,94 @@
+@import url("grid.css");
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	width: 100%;
+	min-height: 100vh;
+}
+
+body {
+	font-size: 100%;
+}
+
+.cf,
+.cf::before,
+.cf::after {
+	clear: both;
+}
+
+.cf::before,
+.cf::after {
+	content: "";
+	display: table;
+}
+
+.main-header {
+	min-height: 100vh;	
+	position: relative;
+}
+
+.main-header::before,
+.main-header::after {
+	content: "";	
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.main-header::before {
+	background: transparent url("../img/bg.png") no-repeat;
+	background-size: cover;
+	z-index: 1;
+	opacity: .5;
+}
+
+.main-header::after {
+	background-color: rgba(98,98,98,.5);
+	z-index: 2;
+}
+
+.logo {
+	float: left;
+}
+
+.logo a {
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.nav-button {
+	float: right;
+}
+
+.nav-button span {
+	display: block;
+	border-bottom: 1px solid #000;
+	margin-bottom: 6px;
+}
+
+.nav-button span:first-child {
+	width: 31px;
+}
+
+.nav-button span:nth-child(2) {
+	width: 15px;
+}
+
+.nav-button span:last-child {
+	width: 23px;
+	margin-bottom: 0;	
+}
+
+.main-header .container {
+	position: relative;
+	z-index: 3;
+}
