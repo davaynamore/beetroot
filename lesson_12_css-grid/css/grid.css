@@ -7,6 +7,14 @@
 .row {
 	margin-left: -15px;
 	margin-right: -15px;
+	clear: both;
+}
+
+.row::before,
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 [class^="col-"] {
