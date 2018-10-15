@@ -431,11 +431,11 @@ ul {
 	padding: 5px 0;
 	cursor: pointer;
 	font-size: 15px;
-	position: relative;
+	float: left;
 	z-index: 50;
 }
 
-.size-list__label input {
+.size-list__item input {
 	position: absolute;
 	display: inline-block;
 	width: 0;
@@ -447,7 +447,10 @@ ul {
 	padding: 0;
 }
 
-.size-list__label--active {
+
+.size-list__item input:checked + .size-list__label
+/*.size-list__label--active*/
+{
 	border-color: #000;
 }
 

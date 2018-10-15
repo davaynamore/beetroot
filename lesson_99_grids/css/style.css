@@ -2,41 +2,35 @@
 	box-sizing: border-box;
 }
 
-.cf {
-	clear: both;
-}
-
-.cf::before,
-.cf::after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 15px;
 }
 
-.ba-row {
+.row {
 	margin: 0 -15px 30px;
+	clear: both;
 }
 
-.ba-row .ba-row {
+.row::before,
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.row:last-child {
 	margin-bottom: 0;
 }
 
-.ba-inner-row + .ba-inner-row {
-	margin-top: 30px;
-}
-
-.col {
+[class*="col-"] {
 	float: left;
 	font-size: 0;
 	min-height: 150px;
-	background: rgba(160,245,168,.4);
 	padding: 0 15px;
+
+	/* background: rgba(160,245,168,.4); */
 }
 
 .col-double {

@@ -1,0 +1,65 @@
+html, body {
+	width: 100%;
+	min-height: 100vh;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+}
+
+p {
+	font: italic 16px/3 Arial, Helvetica, sans-serif;
+}
+
+span {
+	font-size: 1.5em;
+}
+
+svg {
+	width: 500px;
+}
+
+#head {
+	stroke: black;
+}
+
+.eyes {
+	stroke: brown;
+	fill: green;
+	fill-opacity: 1;
+}
+
+.eye_right {
+
+}
+
+.eye_left {
+
+}
+
+#mouth {
+	stroke: red;
+}
+
+div{
+	width: 5px;
+	height: 5px;
+	color: red;
+	border: 5px solid red;
+	box-shadow:
+		0 0 0 5px currentColor,
+		0 0 0 10px yellow,
+		0 0 0 15px orange,
+		0 0 0 20px purple;
+	background-color: blue;
+}
+
+h1 {background-color: 'red'}
+
+div {
+	color: green;
+}
+

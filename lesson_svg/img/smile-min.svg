@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="91.924mm" height="91.924mm" version="1.1" viewBox="0 0 325.7143 325.7143" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <g transform="translate(-97.143 -239.51)" stroke-linecap="round" stroke-width="20">
+    <circle id="mouth" cx="259.29" cy="400" r="100" fill-opacity="0" stroke="#000" stroke-linejoin="round"/>
+    <rect x="155.71" y="299.51" width="205.71" height="102.14" fill="#fff" stroke="#fff"/>
+  </g>
+  <g transform="translate(-97.143 -239.51)" fill-opacity="0" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="20">
+    <circle class="eyes eye_left" cx="193.93" cy="347.72" r="12"/>
+    <circle class="eyes eye_right" cx="321.43" cy="347.36" r="12"/>
+  </g>
+  <g transform="translate(-97.143 -239.51)">
+    <circle id="head" cx="260" cy="402.36" r="152.86" fill-opacity="0" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+  </g>
+</svg>
