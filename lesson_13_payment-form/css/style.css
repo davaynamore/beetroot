@@ -1,0 +1,218 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100vh;
+	width: 100%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+	color: #9eabad;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1;
+}
+
+label {
+	font-weight: bold;
+}
+
+label:not(.exp-date) {
+	display: block;
+	margin-bottom: 8px;
+}
+
+label[for="cvv"] {
+	text-transform: uppercase;
+}
+
+a {
+	color: currentcolor;
+	text-decoration: none;
+}
+
+input,
+select {
+	color: #727f82;
+	margin-bottom: 25px;
+	padding-left: 8px;
+	font-weight: bold;
+	border: 2px solid #b4c1c4;
+	min-height: 44px;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	-ms-appearance: none;
+	appearance: none!important;
+}
+
+input:not(.cvv-input){
+	width: 100%;
+}
+
+input:focus {
+	outline: 2px solid #7eccdf;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #e3e7e8;
+	margin-bottom: 25px;
+}
+
+.cf {
+	clear: both;
+}
+
+.cf::before,
+.cf::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	max-width: 800px;
+	width: 100%;
+	padding: 35px 0;
+	background: transparent url("../img/unsplash_2.jpg") no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 0;
+}
+
+.form-field {
+	max-width: 336px;
+	margin: 0 auto;
+	background-color: #fff;
+	position: relative;
+	z-index: 3;
+}
+
+.form-field > * {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.form-header {
+	background-color: #eee4aa;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: flex;
+}
+
+.left-side {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.username {
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #6e7f7b;
+	margin-bottom: 3px;
+}
+
+.total-text {
+	color: #a6a28d;
+	letter-spacing: 1px;
+	font-size: .7em;
+	text-transform: uppercase;
+}
+
+.total-price {
+	color: #637570;
+	font-size: 2.7em;
+	font-weight: bold;
+	display: flex;
+	width: 50%;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.payment-form {
+	padding-top: 45px;
+	padding-bottom: 20px;
+}
+
+.exp-date-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 25px;
+}
+
+.exp-date {
+	position: relative;
+}
+
+.exp-date::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 12px;
+	transform: translateY(-50%);
+	width: 12px;
+	height: 10px;
+	background: transparent url("../img/arrow-down.svg") no-repeat 50% 50%;
+}
+
+select[name^="exp-"] {
+	margin-bottom: 0;
+}
+
+select[name="exp-month"] {
+	min-width: 176px;
+}
+
+select[name="exp-year"] {
+	min-width: 96px;
+}
+
+.cvv-input {
+	max-width: 95px;
+	margin-right: 10px;
+}
+
+.cvv-description {
+	font-size: .9em;
+}
+
+.cvv-description + a {
+	border-bottom: 1px dotted currentcolor;
+}
+
+.submit-input {
+	background-color: #26b168;
+	border-color: #26b168;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.5em;
+	cursor: pointer;
+	min-height: 48px;
+	padding: 0;
+}
+
+.cancel-field {
+	text-align: center;
+}
+
+.cancel-link {
+	font-weight: bold;
+	font-size: .9em;
+	padding-bottom: 2px;
+	border-bottom: 1px solid currentcolor;
+}

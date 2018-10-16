@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Paymment Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="form-field">
+			<header class="form-header cf">
+				<div class="left-side">
+					<p class="username">Harold Finch</p>
+					<span class="total-text">your total</span>
+				</div>
+				<div class="total-price">
+					<span>
+						$88
+					</span>
+				</div>
+			</header>
+			<form action="" class="payment-form" name="payment">
+				<label for="cc">Credit card number</label>
+				<input type="text" class="cc-input" id="cc" autofocus required pattern="[0-9]{16}" minlength="16" maxlength="16">
+				<label>Expirayion date</label>
+				<div class="exp-date-wrapper">
+					<label for="exp-month" class="exp-date">
+						<select name="exp-month" id="exp-month" required>
+							<option value="Month" selected disabled>Month</option>
+							<option value="Jan">Jan</option>
+							<option value="Feb">Feb</option>
+							<option value="Mar">Mar</option>
+							<option value="Apr">Apr</option>
+							<option value="May">May</option>
+							<option value="Jun">Jun</option>
+							<option value="Jul">Jul</option>
+							<option value="Aug">Aug</option>
+							<option value="Sep">Sep</option>
+							<option value="Oct">Oct</option>
+							<option value="Nov">Nov</option>
+							<option value="Dec">Dec</option>
+						</select>
+					</label>
+					<label for="exp-year" class="exp-date">
+						<select name="exp-year" id="exp-year" required>
+							<option value="Year" selected disabled>Year</option>
+							<option value="2010">2010</option>
+							<option value="2011">2011</option>
+							<option value="2012">2012</option>
+							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+						</select>
+					</label>
+				</div>
+				<label for="cvv">cvv</label>
+				<input type="text" id="cvv" class="cvv-input" minlength="3" maxlength="4" required pattern="[0-9]{3,4}">
+				<span class="cvv-description">3 or 4 digits - </span><a href="#">view example</a>
+				<hr>
+				<input type="submit" class="submit-input" value="Pay">
+				<div class="cancel-field">
+					<a class="cancel-link" href="#">Cancel order</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
