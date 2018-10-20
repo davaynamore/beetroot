@@ -1,0 +1,168 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	width: 100%;
+	min-height: 100vh;
+}
+
+body {
+	font-size: 100%;
+	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+/* 	background: url("http://photo-1.ru/wp-content/uploads/2016/12/gory-sneg-zima-noch-mlechnyi-put.jpg") no-repeat;
+background-size: cover; */
+position: relative;
+background: black;
+}
+
+body::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	/* background-color: rgba(0,0,0,.8); */
+} 
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	padding: 50px 0;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+}
+
+/* .color-div {
+	display: inline-block;
+
+	width: 40px;
+	height: 40px;
+	background-color: purple;
+	border: 10px solid green;
+	box-shadow: 
+		0 0 0 10px blue,
+		0 0 0 20px red,
+		0 0 0 30px yellow;
+
+	border-radius: 50%;
+	} */
+
+	.border-div {
+		position: relative;
+		border: 2px solid #fff;
+		border-top: none;
+		border-radius: 10px;
+		padding: 50px 0;
+		color: #fff;
+	}
+
+	.border-div::before,
+	.border-div::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 35%;
+		border: 2px solid #fff;
+		border-right: none;
+		border-bottom: none;
+		border-left: none;
+		border-radius: 10px;
+	}
+
+	.border-div::before {
+		left: 0;
+		border-top-right-radius: 0;
+	}
+
+	.border-div::after {
+		right: 0;
+		border-top-left-radius: 0;
+	}
+
+	h1 {
+		position: absolute;
+		width: 100%;
+		top: -18px;
+		left: 0;
+		text-align: center;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	.inner-div {
+		max-width: 80%;
+		margin: auto;
+	}
+
+	.circle {
+		fill: none;
+	}
+
+	.big {
+		stroke: #f00;
+	}
+
+	.middle {
+		stroke: #0f0;
+	}
+
+	.small {
+		stroke: #00f;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.big,
+		.middle {
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: 800px) {
+		.big {
+			display: none;
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		display: inline-block;
+		position: relative;
+	}
+
+	label {
+		color: #fff;
+		font-size: 2em;
+		display: block;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		border: 2px solid transparent;
+	}
+
+	input[type="radio"] {
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+input[type="radio"]:checked + label {
+	border-color: #fff;
+}
