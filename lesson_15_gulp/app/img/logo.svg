@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70" height="76" version="1.1" viewBox="0 0 70 76" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <g><path class="big_circle" d="m1 34.206c0 18.34 15 33.21 33.5 33.21s33.5-14.87 33.5-33.21-15-33.21-33.5-33.21-33.5 14.87-33.5 33.21z" fill="none" stroke="#f5f7fb" stroke-width="2"/></g>
+  <g><path class="triangle" d="m63.312 69.427-28.81-55-28.81 55z" fill="none" stroke="#f5f7fb" stroke-width="2"/></g>
+  <g><path class="small" d="m30.906 70.448c0 1.97 1.61 3.57 3.6 3.57s3.6-1.6 3.6-3.57-1.61-3.57-3.6-3.57-3.6 1.6-3.6 3.57z" fill="#f5f7fb" stroke="#f5f7fb" stroke-width="2"/></g>
+  <g><path class="small" d="m0.99445 70.449c0 1.97 1.61 3.57 3.6 3.57 1.99 0 3.6-1.6 3.6-3.57s-1.61-3.57-3.6-3.57c-1.99 0-3.6 1.6-3.6 3.57z" fill="#f5f7fb" stroke="#f5f7fb" stroke-width="2"/></g>
+  <g><path class="small" d="m60.808 70.465c0 1.97 1.61 3.57 3.6 3.57s3.6-1.6 3.6-3.57-1.61-3.57-3.6-3.57-3.6 1.6-3.6 3.57z" fill="#f5f7fb" stroke="#f5f7fb" stroke-width="2"/></g>
+</svg>

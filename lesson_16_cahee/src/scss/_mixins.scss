@@ -1,0 +1,15 @@
+@mixin button($bg-color, $min-width: 170px){
+	color: $secondary-color;
+	text-transform: uppercase;
+	border: none;
+	padding: 15px 0;
+	box-shadow: 0 2px 5px 0px rgba(0,0,0,0.2);
+	background: $bg-color;
+	min-width: $min-width;
+	cursor: pointer;
+	font-size: $font-size-element;
+
+	 &:hover {
+			background: lighten($bg-color, 10%);
+	 }
+}
