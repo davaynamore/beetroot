@@ -12,7 +12,7 @@ browserSync = require('browser-sync').create();
 gulp.task('sass', () => {
  return gulp.src('src/scss/**/*.scss')
  .pipe(sourcemaps.init())
- .pipe(sass({outputStyle: 'compressed'}).on('error', notify.onError("SASS-Error: <%= error.message %>")))
+ .pipe(sass().on('error', notify.onError("SASS-Error: <%= error.message %>")))
  .pipe(autoprefixer({
    browsers: ['last 2 versions'],
    cascade: false
@@ -36,7 +36,8 @@ gulp.task('img', () => {
 
 gulp.task('watch', () => {
  gulp.watch('src/scss/**/*.scss', ['sass']),
- gulp.watch('src/index.html',['html'])
+ gulp.watch('src/index.html',['html']),
+ gulp.watch('src/img/*.*',['img'])
 });
 
 gulp.task('connect', function() {

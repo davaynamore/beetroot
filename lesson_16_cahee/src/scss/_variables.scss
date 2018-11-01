@@ -1,6 +1,8 @@
 $white-color: #ffffff;
 $dark-color: #262626;
 $orange-color: #ff6033;
+$grey-color: #9d9d9d;
+$blue-color: #5585a2;
 
 $font-size-form: 15px;
 $font-size-text: 17px;
@@ -18,3 +20,21 @@ $main-color: $dark-color;
 $secondary-color: $white-color;
 
 $img-path: '../img/';
+
+$sections: (
+	home: #f9f8fb,
+	about: #00b2b2,
+	services: #70bfff,
+	gallery: #ffe92f,
+	subscribe: #ffffff,
+	blog: #b07cf7,
+	contact: #A5B6B0,
+	footer: #262626
+	);
+
+$services: (
+	1: 'shopping-icon.svg',
+	2: 'quality-icon.svg',
+	3: 'delivery-icon.svg',
+	4: 'org-icon.svg'
+	);

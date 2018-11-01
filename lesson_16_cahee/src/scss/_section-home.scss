@@ -1,28 +1,18 @@
 .ba-first-screen {
 	min-height: 100vh;
 	max-height: 100vh;
-	background: #f9f8fb url($img-path + 'header-bg.png') no-repeat 50% 55%;
+	@include bg-image('header-bg.png', 50% 55%);
+	position: relative;
 
-	.container {
+	& > .container {
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
 
 		.row {
-
-			&:first-child {
-				flex-grow: 2;
-			}
-
-			&:nth-child(2) {
-				flex-grow: 2;
-			}
-
-			&:last-child {
-				flex-grow: 1;
-				display: flex;
-				align-items: flex-end;
-			}
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
 		}
 	}
 
@@ -45,11 +35,36 @@
 	}
 }
 
+.header-line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
 .ba-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	min-height: 145px;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+
+	&.scrolled {
+		min-height: 55px;
+		background-color: rgba(#fff, .7);
+		opacity: .5;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		.ba-header__logo {
+			font-size: 30px;
+		}
+	}
 
 	&__logo {
 		font-size: 50px;
@@ -72,3 +87,9 @@
 		}
 	}
 }
+
+.scroll-block {
+	position: absolute;
+	bottom: 50px;
+}
+

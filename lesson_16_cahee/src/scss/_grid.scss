@@ -2,12 +2,23 @@
 	max-width: 1200px;
 	padding: 0 15px;
 	margin: 0 auto;
+	width: 100%;
 }
 
 .row {
 	margin-left: -15px;
 	margin-right: -15px;
 	clear: both;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row-end {
+	justify-content: flex-end;
+}
+
+.col-center {
+	justify-content: center;
 }
 
 .row::before,
@@ -20,6 +31,7 @@
 [class^="col-"] {
 	padding: 0 15px;
 	display: inline-flex;
+	flex-direction: column;
 }
 
 .col-1 {

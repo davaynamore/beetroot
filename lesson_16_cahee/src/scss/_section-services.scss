@@ -1,0 +1,59 @@
+.section-services {
+	min-height: 790px;
+	@include bg-image('services-bg.png', 75% 50%);
+	display: flex;
+	align-items: center;
+
+	.section-title {
+		text-align: right;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__list-item {
+		max-width: 400px;
+		margin-bottom: 1em;
+		width: 100%;
+		@extend .shadow;
+		background-color: $white-color;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		@each $child, $icon in $services {
+			&:nth-child(#{$child}) .section-services__list-link::after {
+				@include bg-image(#{$icon}, 50% 50%);
+			}
+		}
+	}
+
+	&__list-link {
+		$size: 100px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 20px 0;
+		font-size: $font-size-element;
+		font-weight: bold;
+		text-transform: capitalize;
+		min-height: $size;
+		border-right: 1px solid $grey-color;
+		position: relative;
+		max-width: calc(100% - #{$size});
+
+		&::after {
+			content: '';
+			width: $size;
+			height: $size;
+			position: absolute;
+			right: -#{$size};
+		}
+	}
+}

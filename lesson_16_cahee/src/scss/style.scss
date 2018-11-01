@@ -1,5 +1,8 @@
-@import "grid";
 @import "variables";
+@import "grid";
 @import "mixins";
 @import "common";
-@import 'first-screen';
+@import 'section-home';
+@import 'section-about';
+@import 'section-services';
+@import 'section-gallery';

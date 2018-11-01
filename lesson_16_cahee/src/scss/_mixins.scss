@@ -3,13 +3,20 @@
 	text-transform: uppercase;
 	border: none;
 	padding: 15px 0;
-	box-shadow: 0 2px 5px 0px rgba(0,0,0,0.2);
+	@extend .shadow;
 	background: $bg-color;
 	min-width: $min-width;
 	cursor: pointer;
 	font-size: $font-size-element;
+	transition: background .3s ease;
 
 	 &:hover {
 			background: lighten($bg-color, 10%);
 	 }
+}
+
+@mixin bg-image($imageName, $bgPosition: 0 0){
+	background-image: url($img-path + $imageName);
+	background-repeat: no-repeat;
+	background-position: $bgPosition;
 }

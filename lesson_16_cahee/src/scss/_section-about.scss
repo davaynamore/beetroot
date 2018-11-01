@@ -1,0 +1,18 @@
+.section-about {
+	min-height: 700px;
+	@include bg-image('about-bg.png', 25% 70%);
+	color: $white-color;
+	padding-top: 10em;
+
+	&__text:not(:last-child) {
+			margin-bottom: .6em;
+	}
+
+	.section-title {
+		margin-bottom: 12px;
+	}
+}
+
+.about-content__wrapper {
+	padding-left: 4em;
+}
