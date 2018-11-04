@@ -1,0 +1,103 @@
+.sect {
+	max-width: 1200px;
+	margin: auto;
+	border: 3px solid #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100px;
+}
+
+@each $section, $color in $sections {
+	.#{$section} {
+		background-color: $color;
+	}
+}
+
+
+// @for $i from 3 through 6 {
+//   .section_#{$i} .span_#{$i} { font-size: 2em * $i; }
+// }
+
+
+
+.section_1 {
+	@extend .sect;
+
+	.btn {
+		@include button(#ff6033);
+		font-size: 1.5rem;
+	}
+} 
+
+.section_2 {
+	@extend .sect;
+	.btn {
+		@include button(#eb2c3f);
+	}
+} 
+
+.section_3 {
+	@extend .sect;
+	.btn {
+		@include button(#ff8b10);
+	}
+}
+
+.section_4 {
+	@extend .sect;
+	.btn {
+		@include button(#5585a2);
+	}
+}
+
+.section_5 {
+	@extend .sect;
+	.btn {
+		@include button(#96b92c);
+	}
+}
+
+.section_6 {
+	@extend .sect;
+	.btn {
+		@include button(#f72b3b);
+	}
+}
+
+
+$type: matador;
+
+
+section {
+	@if $type == ocean {
+		border-color: blue!important;
+		} @else if $type == matador {
+			border-color: red!important;
+			} @else if $type == monster {
+				border-color: green!important;
+				} @else {
+					border-color: black!important;
+				}
+			}
+
+
+
+
+
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
+
+.header-navigation {
+  @include z-index(navbar);
+}
+
+.footer-navigation {
+	@include z-index(fn);	
+}

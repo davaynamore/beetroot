@@ -32,6 +32,25 @@
 
 	&__button {
 		@include button($orange-color, 200px);
+		
+		color: #000;
+		background: rgba(73,106,254,1);
+		background: linear-gradient(
+				45deg, rgba(73,106,254,1) 0%,
+				rgba(73,106,254,1) 40%,
+				rgba(84,115,253,1) 41%,
+				rgba(84,115,253,1) 100%
+			);
+
+		&:hover {
+					background: rgba(73,106,254,1);
+		background: linear-gradient(
+				45deg, rgba(73,106,254,1) 0%,
+				rgba(73,106,254,1) 40%,
+				rgba(84,115,253,1) 41%,
+				rgba(84,115,253,1) 100%
+			);
+		}
 	}
 }
 
