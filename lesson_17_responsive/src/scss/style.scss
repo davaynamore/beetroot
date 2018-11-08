@@ -1,7 +1,6 @@
-@import "variables";
-@import "grid";
-@import "mixins";
-@import "common";
-
+@import "_variables.scss";
+@import "_grid.scss";
+@import "_mixins.scss";
+@import "_common.scss";
 //sections
-@import "header";
+@import "_header.scss";
