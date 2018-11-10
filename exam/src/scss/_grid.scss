@@ -1,0 +1,31 @@
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.row {
+	clear: both;
+	margin-right: -15px;
+	margin-left: -15px;
+
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+}
+
+%col- {
+	float: left;
+	padding: 0 15px;
+	min-height: 1px;
+}
+
+@for $i from 1 through 12 {	
+	.col-#{$i} {
+		@extend %col-;
+		width: 100%*$i/12;
+	}
+}

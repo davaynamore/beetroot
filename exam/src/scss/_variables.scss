@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+@font-face {
+ font-family: "Aleo", sans-serif;
+ src: url("../fonts/aleo-regular-webfont.eot"),
+        url("../fonts/aleo-regular-webfont.woff"),
+        url("../fonts/aleo-regular-webfont.woff2"),
+        url("../fonts/aleo-regular-webfont.ttf"),
+        url("../fonts/aleo-regular-webfont.svg");
+}
+
+$white-color: #fff;
+$light-color: #e8e8e8;
+$light-blue-color: #5474fd;
+$dark-blue-color: #496bfe;
+$light-grey-color: #333333;
+$dark-grey-color: #232323;
+
+$main-color: $white-color;
+$secondary-color: $light-color;
+
+$main-font: 'Aleo', sans-serif;
+$secondary-font: 'Josefin Sans', sans-serif;
+
+$font-size: 16px;
+
+$img-path: '../img/';
+
+$color: black;
+
+// <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+// <i class="fab fa-facebook-f"></i>
+// <i class="fab fa-twitter"></i>
+// <i class="fab fa-linkedin-in"></i>
+// <i class="fab fa-youtube"></i>
+// <i class="fab fa-pinterest"></i>
