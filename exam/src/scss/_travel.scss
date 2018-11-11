@@ -1,0 +1,44 @@
+.travel {	
+
+	.col-6 {
+		min-height: 700px;
+		position: relative;
+
+		@media (max-width: 1024px){
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__card {
+		min-height: 370px;
+		background-color: rgba($dark-grey-color, .8);
+		padding: 45px 30px;
+		font-size: 20px;
+		font-family: $secondary-font;
+		@media (min-width: 1025px){
+			position: absolute;
+			bottom: 100px;
+		}
+
+		&-country {
+			text-transform: capitalize;
+			margin-bottom: 30px;
+			display: block;
+		}
+
+		&-title {
+			margin-bottom: 25px;
+
+			& > * {
+				text-transform: uppercase;
+			}
+		}
+
+		&-description {
+			font-size: 16px;
+			margin-bottom: 50px;
+		}
+	}
+}
+
