@@ -2,6 +2,7 @@ body {
 	font-family: $main-font;
 	font-size: $base-size;
 	color: $white-color;
+	background-color: $dark-color;
 }
 
 a {
@@ -10,6 +11,7 @@ a {
 
 	&:hover {
 		text-decoration: none;
+		color: $pink-color;
 	}
 }
 
@@ -32,6 +34,53 @@ ul {
 	font-weight: bold;
 
 	&::after {
-		content: ''; // arrow here
+		content: '';
 	}
+}
+
+.arrow {
+	$size: 15px;
+	$border: 2px solid currentcolor;
+
+	display: inline-block;
+	width: $size;
+	border-top: $border;
+	position: relative;
+	vertical-align: middle;
+	margin-left: .5em;
+
+	&::before {
+		$divider: 2.5;
+		content: "";
+		display: block;
+		position: absolute;
+		top: -1px;
+		right: -2px;
+		width: $size / $divider;
+		height: $size / $divider;
+		transform-origin: top right;
+		border-top: $border;
+		border-right: $border;
+		transform: rotate(45deg);
+	}
+}
+
+.section-title {
+	position: absolute;
+	top: 0;
+	transform: translateY(-76%);
+
+	& * {
+		font-size: rem(91px);
+		font-weight: 900;
+		text-transform: uppercase;
+		line-height: 1;
+		opacity: 0.05;
+		margin: 0;
+	}
+}
+
+
+.section__height {
+	min-height: 470px;
 }

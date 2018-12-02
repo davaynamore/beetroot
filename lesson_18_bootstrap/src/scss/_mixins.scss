@@ -18,3 +18,18 @@
   @if $target == 0 { @return 0 }
   @return $target / $context + 0rem;
 }
+
+
+@mixin decor($font-size, $line-height: 1.2){
+	content: '';
+	display: block;
+	width: 90px;
+	border-top: 1px solid $white-color;
+	position: absolute;
+	transform: translate(-150%, $font-size * $line-height / 2);
+
+	@media screen and (min-height: 1367px){
+		transform: translate(-180%, $font-size * $line-height / 2);
+	}
+}
+
