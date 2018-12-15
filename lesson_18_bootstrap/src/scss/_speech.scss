@@ -1,0 +1,47 @@
+.speech {
+	padding-top: rem(290px);
+
+	.section-title {
+		z-index: -1;
+	}
+
+	&__content {
+		background-color: $pink-color;
+		position: relative;
+	}
+
+	&__height {
+		min-height: 445px;
+	}
+
+	&__img {
+		transform: translate(-15px, -10%);
+		max-width: 100%;
+		position: absolute;
+	}
+
+	&__text {
+		@extend .about__text;
+		font-style: italic;
+		z-index: 2;
+
+		&::before {
+			@include decor(16px);
+			width: 90px;
+		}		
+	}
+
+	.quotes {
+		font-size: 150px;
+		font-weight: 900;
+		position: absolute;
+		color: #da3e2d;
+		z-index: -1;
+	}
+
+	&__author {
+		text-transform: capitalize;
+		font-weight: bold;
+	}
+}
+

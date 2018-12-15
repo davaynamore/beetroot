@@ -1,4 +1,9 @@
 .services {
+	position: relative;
+
+	&__content {
+		position: relative;
+	}
 
 	.grid-item {
 
