@@ -1,6 +1,6 @@
 'use strict';
 
-const   gulp = require('gulp'),
+const gulp = require('gulp'),
 autoprefixer = require('gulp-autoprefixer'),
 notify = require('gulp-notify'),
 sass = require('gulp-sass'),
@@ -39,10 +39,10 @@ gulp.task('img', () => {
 gulp.task('watch', () => {
  gulp.watch('src/scss/**/*.scss', ['sass']),
  gulp.watch('src/index.html',['html']),
- gulp.watch('src/img/*.*',['img'])
+ gulp.watch('src/img/**/*.*',['img'])
 });
 
-gulp.task('connect', function() {
+gulp.task('connect', () => {
  browserSync.init({
    server: {
      baseDir: "app",
@@ -51,7 +51,7 @@ gulp.task('connect', function() {
  });
 });
 
-gulp.task('clean', function () {
+gulp.task('clean', () => {
   return gulp.src('app')
   .pipe(clean({
     force: true,
