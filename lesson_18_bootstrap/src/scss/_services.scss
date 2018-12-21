@@ -1,0 +1,37 @@
+.services {
+	position: relative;
+
+	&__content {
+		position: relative;
+	}
+
+	.grid-item {
+
+
+		&__title {
+			margin-bottom: 30px;
+			display: flex;
+
+			& > * {
+				text-transform: capitalize;
+				margin: 0;
+				font-size: rem(24px);
+				font-weight: 300;
+				letter-spacing: 2px;
+			}
+
+		}
+
+		&__icon {
+			margin-right: 1rem;
+		}
+
+		&__text {
+			font-size: rem(14px);
+			line-height: 1.85;
+			font-weight: 200;
+			letter-spacing: 1px;
+			margin-bottom: 30px;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.main-footer {
+	min-height: 265px;
+	background-color: $dark-grey-color;
+	padding-top: 115px;
+
+	@media (max-width: 1024px){
+		padding-top: 50px;
+		min-height: 200px;
+	}
+
+	&__content {
+		max-width: 170px;
+		margin: 0 auto;
+	}
+
+	.logo {
+		margin-bottom: 30px;
+
+		h2 {
+			font-size: 24px;
+			letter-spacing: 3px;
+		}
+
+		&-description {
+			letter-spacing: 1px;
+		}
+	}
+
+	.social-menu {
+		display: flex;
+		justify-content: space-between;
+
+		&__link {
+			display: block;
+
+			&:hover {
+				color: $light-blue-color;
+			}
+		}
+	}
+}

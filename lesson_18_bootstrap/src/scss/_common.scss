@@ -1,0 +1,170 @@
+body {
+	font-family: $main-font;
+	font-size: $base-size;
+	color: $white-color;
+	background-color: $dark-color;
+	min-height: 30000px;
+}
+
+a {
+	color: $white-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+		color: $pink-color;
+	}
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+
+	li {
+		list-style: none;
+
+		a {
+			display: block;
+		}
+	} 
+}
+
+section {
+	position: relative;
+	z-index: 1;
+}
+
+.arrow-link {
+	font-size: rem(18px);
+	letter-spacing: 1px;
+	font-weight: bold;
+
+	&::after {
+		content: '';
+	}
+}
+
+.arrow {
+	$size: 15px;
+	$border: 2px solid currentcolor;
+
+	display: inline-block;
+	width: $size;
+	border-top: $border;
+	position: relative;
+	vertical-align: middle;
+	margin-left: .5em;
+
+	&::before {
+		$divider: 2.5;
+		content: "";
+		display: block;
+		position: absolute;
+		top: -1px;
+		right: -2px;
+		width: $size / $divider;
+		height: $size / $divider;
+		transform-origin: top right;
+		border-top: $border;
+		border-right: $border;
+		transform: rotate(45deg);
+	}
+}
+
+.section-title {
+	position: absolute;
+	top: 0;
+	transform: translateY(-76%);
+
+	& * {
+		font-size: rem(91px);
+		font-weight: 900;
+		text-transform: uppercase;
+		line-height: 1;
+		opacity: 0.05;
+		margin: 0;
+	}
+}
+
+
+.section__height {
+	min-height: 470px;
+}
+
+.menu-wrapper {
+	display: flex;
+	$size: 20px;
+	width: $size;
+	height: $size;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+}
+
+.mobile-menu {
+	$size: 20px;
+	width: $size;
+	height: 2px;
+	background-color: $white-color;
+	position: relative;
+	display: block;
+
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		width: $size;
+		height: 2px;
+		background-color: $white-color;
+		position: absolute;
+		transform-origin: center;
+	}
+
+	$distance: 6px;
+
+	&::before {
+		top: -$distance;
+	}
+
+	&::after {
+		top: $distance;
+	}
+
+	&.opened {
+		background-color: transparent;
+
+		&::before,
+		&::after {
+			top: 0;
+		}
+
+		&::after {
+			transform: rotate(45deg)
+		}
+
+		&::before {
+			transform: rotate(-45deg)
+		}
+	}
+
+
+	@media all and (min-width: 992px) {
+		display: none;
+	}
+
+
+
+	&.opened {
+
+	}
+}
+
+.form {
+	padding: 100px 0;
+	form {
+		input,
+		textarea {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,157 @@
+.first-screen {
+	$paddingTop: 80px;
+	position: relative;
+	background-image:
+	linear-gradient(to top, $dark-color 0%, rgba($top-gradient-color, .9) 100%), 
+	url($img-path + "header-bg.jpg");
+
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	z-index: 2;
+
+	padding-top: $paddingTop;
+
+	&__container {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: calc(100vh - #{$paddingTop});
+	}
+
+	&__image {
+		
+
+		&-link {
+			position: relative;
+			display: inline-block;
+			max-width: 70%;			
+
+			@media screen and (min-width: 1367px) {
+				max-width: 100%;
+			}
+
+			.fa-play {
+				@include centered;
+				z-index: 1;
+				color: $pink-color;
+				font-size: rem(24px)
+			}
+
+			&::after {
+				$size: 90px;
+				content: '';
+				display: block;				
+				width: $size;
+				height: $size;
+				border: 10px solid $border-color;
+				border-radius: 50%;
+				@include centered;
+				background-color: $white-color;
+			}
+		}
+
+		img {
+			max-width: 100%;
+		}		
+		
+	}
+
+	&__title {
+		$font-size: rem(48px);
+		margin-bottom: rem(30px);
+
+		& > * {
+			text-transform: uppercase;
+			font-size: $font-size;
+			letter-spacing: 2px;
+			font-weight: 300;
+			margin-bottom: 0;
+		}
+
+		&::before {
+			@include decor($font-size);
+		}
+
+	}
+
+	&__text {
+		font-weight: 200;
+		max-width: 90%;
+		line-height: 2;
+		color: $light-color;
+		letter-spacing: 1px;
+		margin-bottom: rem(30px);
+	}
+
+	.navigation {
+		width: 100%;
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		@media all and (min-width: 992px) {
+			position: static;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__list {
+			display: none;
+			flex-direction: column;
+			align-items: flex-end;
+			transform: translateX(-20px);
+			position: absolute;
+			padding-top: 45px;
+			right: -15px;
+			top: 0;
+			z-index: 1;
+
+			&.open {
+				display: flex;
+
+				.navigation__item {
+					margin-bottom: .5rem;
+				}
+			}
+
+			@media all and (min-width: 992px) {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: row;
+				align-items: center;
+				position: static;
+				padding-top: 0;
+				right: 0;
+			}
+		}
+
+
+
+		&__link {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: rem(14px);
+
+			&:hover {
+				color: $pink-color;
+			}
+		}
+	}
+}
+
+
+.fixed {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1500000;
+}
