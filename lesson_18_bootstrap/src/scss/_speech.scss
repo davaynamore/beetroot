@@ -1,5 +1,6 @@
 .speech {
 	padding-top: rem(290px);
+	padding-bottom: rem(45px);
 
 	.section-title {
 		z-index: -1;
@@ -37,6 +38,8 @@
 		position: absolute;
 		color: #da3e2d;
 		z-index: -1;
+		line-height: .6;
+		transform: translateX(-35%);
 	}
 
 	&__author {
@@ -44,4 +47,3 @@
 		font-weight: bold;
 	}
 }
-

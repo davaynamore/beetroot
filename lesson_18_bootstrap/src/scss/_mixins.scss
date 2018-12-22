@@ -15,8 +15,8 @@
 }
 
 @function rem($target, $context: $base-size) {
-  @if $target == 0 { @return 0 }
-  @return $target / $context + 0rem;
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0rem;
 }
 
 
@@ -30,6 +30,22 @@
 
 	@media screen and (min-height: 1367px){
 		transform: translate(-180%, $font-size * $line-height / 2);
+	}
+}
+
+
+@mixin placeholder($color) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&::-moz-placeholder {
+		color: $color;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+	&:-moz-placeholder {
+		color: $color;
 	}
 }
 

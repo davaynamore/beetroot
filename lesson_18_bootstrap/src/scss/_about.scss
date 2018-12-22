@@ -15,8 +15,7 @@
 		&::after {
 			content: '';
 			@include overlay;
-			background-color: $about-overlay-color;
-			opacity: .9;
+			background-color: rgba($blue-color, .97);
 		}		
 	}
 

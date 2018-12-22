@@ -1,0 +1,123 @@
+.contact {
+
+	.bg {
+		background-color: $contact-bg-color;
+		min-height: 425px;
+		align-items: stretch;
+		display: flex;
+
+		.row {
+			flex: 100%
+		}
+	}
+
+	&__col {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		flex: 100%;
+	}
+
+	&__data {
+		background: url($img-path+"contact-bg.jpg") no-repeat;
+		background-size: cover;
+		padding: 20px 0;
+
+		&::after {
+			content: "";
+			@include overlay;
+			background-color: rgba($blue-color, .97);
+			z-index: 0;
+		}
+
+		&-item {
+			position: relative;
+			z-index: 1;
+			padding-left: 20%;
+			flex-grow: 2;	
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			&:first-child {
+				justify-content: flex-end;
+			}
+			
+			&:last-child{
+				margin-bottom: 0;
+				justify-content: flex-start;	
+			}
+
+			h6 {
+				font-size: rem(20px);
+				font-weight: bold;
+				text-transform: capitalize;
+			}
+
+			address {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__form {
+		padding-left: 50px;
+		
+		&-title {
+			font-size: rem(30px);
+			margin-bottom: 30px;
+			text-transform: capitalize;
+
+			&::before {
+				@include decor(30px);
+				width: 90px;	
+			}
+			
+		}
+
+		input,
+		textarea,
+		.arrow-link {
+			display: block;
+			background: none;
+			border: none;
+			outline-color: transparent;
+			color: $form-color;
+			font-size: rem(16px);
+			border-bottom: 1px solid currentcolor;
+			width: 100%;
+			max-width: 395px;
+			padding: 0 .5rem .5rem;
+			margin-bottom: 20px;
+
+			&:first-letter {
+				text-transform: uppercase;
+			}
+
+			@include placeholder(currentcolor);
+
+			&:focus {
+				color: $form-hover;
+				@include placeholder(currentcolor);
+			}
+
+
+		}
+
+		.arrow-link {
+			border: none;
+			cursor: pointer;
+			margin-bottom: 0;
+			display: inline-block;
+			width: auto;
+			color: $pink-color;
+			text-transform: capitalize;
+		}
+
+		textarea {
+			resize: none;
+		}
+	}
+	
+}
