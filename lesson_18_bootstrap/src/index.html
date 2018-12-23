@@ -13,44 +13,47 @@
 	<section class="first-screen">
 		<div class="container first-screen__container">
 			<div class="row justify-content-between align-items-center" id="topline">
-
-				<div class="col-1">
-
-					<div class="logo">
-						<a id="test" href="#">
-							<img src="img/logo.png" alt="logo" class="logo__img">
-						</a>					
-					</div>						
-
-				</div>
-
-				<div class="col-7">
-
-					<nav class="navigation">
-						<div class="menu-wrapper">
-							<span class="mobile-menu"></span>	
-						</div>						
-						
-						<ul class="navigation__list" id="test">
-							<li class="navigation__item">
-								<a href="#" class="navigation__link">welcome</a>
-							</li>
-							<li class="navigation__item">
-								<a href="#" class="navigation__link">about</a>
-							</li>
-							<li class="navigation__item">
-								<a href="#" class="navigation__link">services</a>
-							</li>
-							<li class="navigation__item">
-								<a href="#" class="navigation__link">portfolio</a>
-							</li>
-							<li class="navigation__item">
-								<a href="#" class="navigation__link">testimonial</a>
-							</li>
-							<li class="navigation__item">
-								<a href="#" class="navigation__link">contact</a>
-							</li>
-						</ul>
+				<div class="col-12">
+					<nav class="navigation navbar navbar-expand-lg">
+						<div class="row justify-content-between f100 align-items-center">
+							<div class="col-1">
+								<div class="navbar-brand logo">
+									<a id="test" href="#">
+										<img src="img/logo.png" alt="logo" class="logo__img">
+									</a>					
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-end flex-column">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="navbar-toggler-icon">
+										<i class="fas fa-bars"></i>
+										<i class="fas fa-times"></i>
+									</span>
+								</button>						
+								<div class="collapse navbar-collapse" id="navbarNav">
+									<ul class="navigation__list navbar-nav">
+										<li class="navigation__item nav-item active">
+											<a href="#" class="nav-item nav-link navigation__link">welcome <span class="sr-only">(current)</span></a>
+										</li>
+										<li class="navigation__item nav-item">
+											<a href="#" class="nav-link navigation__link">about</a>
+										</li>
+										<li class="navigation__item nav-item">
+											<a href="#" class="nav-link navigation__link">services</a>
+										</li>
+										<li class="navigation__item nav-item">
+											<a href="#" class="nav-link navigation__link">portfolio</a>
+										</li>
+										<li class="navigation__item nav-item">
+											<a href="#" class="nav-link navigation__link">testimonial</a>
+										</li>
+										<li class="navigation__item nav-item">
+											<a href="#" class="nav-link navigation__link">contact</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</nav>
 				</div>
 			</div>
@@ -237,7 +240,7 @@
 							<h2>speech</h2>
 						</div>
 					</div>
-					
+
 				</div>
 
 				<div class="row about__row justify-content-center">
@@ -397,7 +400,9 @@
 		</div>
 	</footer>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	<script src="js/script.js"></script>
 
 </body>
