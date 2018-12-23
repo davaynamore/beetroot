@@ -48,3 +48,36 @@
 		@content;
 	}
 }
+
+
+@mixin min992 {
+	@media all and (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin min768 {
+	@media all and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin min576 {
+	@media all and (min-width: 576px) {
+		@content;
+	}
+}
+
+
+$z-index: (
+	content: 2,
+	navbar: 150000
+);
+
+@function z-index-func($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index-func($key);
+}
