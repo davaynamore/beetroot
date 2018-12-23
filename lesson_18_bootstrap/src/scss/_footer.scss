@@ -13,7 +13,7 @@
 	&__social {
 		display: flex;
 
-		&-item {
+		&-item:not(:last-child) {
 			margin-right: 1rem;
 		}
 
