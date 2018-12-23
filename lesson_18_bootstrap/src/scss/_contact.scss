@@ -95,14 +95,16 @@
 				text-transform: uppercase;
 			}
 
-			@include placeholder(currentcolor);
+			@include placeholder {
+				color: currentcolor;
+			};
 
 			&:focus {
 				color: $form-hover;
-				@include placeholder(currentcolor);
+				@include placeholder {
+					color: currentColor;
+				};
 			}
-
-
 		}
 
 		.arrow-link {

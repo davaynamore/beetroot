@@ -1,0 +1,27 @@
+.footer {
+	min-height: 150px;
+	&__logo {
+		margin-right: .5rem;
+	}
+
+	&__copyright {
+		margin-bottom: 0;
+		color: $form-color;
+		font-size: rem(14px);
+	}
+
+	&__social {
+		display: flex;
+
+		&-item {
+			margin-right: 1rem;
+		}
+
+		&-link {
+
+			&:hover {
+				color: $blue-color;
+			}
+		}
+	}
+}
