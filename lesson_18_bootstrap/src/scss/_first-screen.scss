@@ -22,11 +22,9 @@
 		z-index: 2;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		@include min992 {
-			min-height: calc(100vh - #{$paddingTop});
-		}
+		justify-content: space-between;	
 		
+		min-height: calc(100vh - #{$paddingTop});
 	}
 
 	&__image {
@@ -35,7 +33,7 @@
 		&-link {
 			position: relative;
 			display: inline-block;
-			max-width: 70%;			
+			// max-width: 70%;			
 
 			@media screen and (min-width: 1367px) {
 				max-width: 100%;
@@ -87,11 +85,14 @@
 
 	&__text {
 		font-weight: 200;
-		max-width: 90%;
 		line-height: 2;
 		color: $light-color;
 		letter-spacing: 1px;
 		margin-bottom: rem(30px);
+
+		@include min992 {
+			max-width: 90%;	
+		}
 	}
 
 	.navigation {
@@ -99,6 +100,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+		padding-right: 0;
+		padding-left: 0;
 
 		&__list {
 			display: flex;
@@ -171,12 +174,10 @@
   @include z-index(navbar); // 1
 }
 
-// .fixed {
-// 	position: fixed;
-// 	width: 100%;
-// 	left: 0;
-// 	top: 0;
-// 	z-index: 1500000;
-// }
+.navbar-toggler {
 
-
+	@include max575 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

@@ -201,3 +201,19 @@ section {
 .f100 {
 	flex: 100%;
 }
+
+.laptop-content {
+	justify-content: center!important;
+
+	@include min1367 {
+		justify-content: space-between!important;
+	}
+
+	.row:last-child {
+
+		@include max1366 {
+			flex-grow: 2;
+			align-items: center;	
+		}
+	}
+}

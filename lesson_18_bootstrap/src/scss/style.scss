@@ -14,9 +14,14 @@
 /////////////// REMOVE BEFORE PRODUCTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 @media all and (max-width: 319px) {
+
 	* {
 		display: none!important;	
 	}
+}
+
+.bad {
+	font-size: 2rem;
 }
 
 // .first-screen,
