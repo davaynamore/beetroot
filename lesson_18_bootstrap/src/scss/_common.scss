@@ -102,10 +102,19 @@ section {
 
 .section__height {
 	padding: 15px 15px 0;
+
+	@include min576 {
+		padding: 0 15px 0;
+	}
+
 	@include min768 {
 		padding: 0;
-		min-height: 470px;	
+		min-height: 350px;	
 	}
+
+	@include min992 {
+		min-height: 470px;	
+	}	
 }
 
 .menu-wrapper {
