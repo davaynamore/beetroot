@@ -37,7 +37,6 @@
 	}
 }
 
-
 @mixin placeholder {
 	&::-webkit-input-placeholder {
 		@content;
@@ -64,7 +63,6 @@
 		@content;
 	}
 }
-
 
 @mixin min992 {
 	@media all and (min-width: 992px) {
@@ -95,7 +93,6 @@
 		@content;
 	}
 }
-
 
 $z-index: (
 	content: 2,
