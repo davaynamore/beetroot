@@ -8,7 +8,11 @@
 	background-size: cover;
 	min-height: 100vh;
 	z-index: 2;
-	padding-top: 40px;
+	padding-top: 15px;
+
+	@include min768 {
+		padding-top: 40px;	
+	}
 
 	$paddingTop: 80px;	
 	@include min992 {
@@ -64,8 +68,12 @@
 	}
 
 	&__title {
-		$font-size: rem(48px);
-		margin-bottom: rem(30px);
+		$font-size: rem(36px);
+		margin-bottom: rem(16px);
+
+		@include min768 {
+			margin-bottom: rem(30px);			
+		}
 
 		& > * {
 			text-transform: uppercase;
@@ -73,6 +81,17 @@
 			letter-spacing: 2px;
 			font-weight: 300;
 			margin-bottom: 0;
+			text-align: center;
+
+			@include min768 {
+				$font-size: rem(48px);
+				font-size: $font-size;
+				text-align: right;
+			}
+
+			@include min992 {
+				text-align: left;	
+			}
 		}
 
 		&::before {
@@ -86,7 +105,11 @@
 		line-height: 2;
 		color: $light-color;
 		letter-spacing: 1px;
-		margin-bottom: rem(30px);
+		margin-bottom: rem(16px);
+
+		@include min768 {
+			margin-bottom: rem(30px);			
+		}
 
 		@include min992 {
 			max-width: 90%;	
@@ -100,6 +123,11 @@
 		justify-content: flex-end;
 		padding-right: 0;
 		padding-left: 0;
+
+		@include max767 {
+			padding-top: 0;	
+			padding-bottom: 0;	
+		}		
 
 		&__list {
 			display: flex;
@@ -174,8 +202,14 @@
 
 .navbar-toggler {
 
-	@include max575 {
+	@include max767 {
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	&-icon {
+		@include max767 {
+			// width: 0;
+		}		
 	}
 }

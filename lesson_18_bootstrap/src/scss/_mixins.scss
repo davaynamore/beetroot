@@ -23,6 +23,7 @@
 @mixin decor($font-size, $line-height: 1.2){
 	display: none;
 	content: '';
+	z-index: 1;
 	width: 90px;
 	border-top: 1px solid $white-color;
 	position: absolute;
@@ -78,6 +79,12 @@
 
 @mixin min768 {
 	@media all and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin max767 {
+	@media all and (max-width: 767px) {
 		@content;
 	}
 }

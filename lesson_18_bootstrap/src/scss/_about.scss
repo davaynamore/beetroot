@@ -1,5 +1,9 @@
 .about {
-	padding-top: rem(200px);
+	padding-top: rem(75px);
+
+	@include min768 {
+		padding-top: rem(200px);	
+	}
 
 	&__row {
 		position: relative;
@@ -11,6 +15,11 @@
 		background: url($img-path + 'about-bg.jpg') no-repeat;
 		background-size: cover;
 		position: relative;
+		padding: 15px;
+
+		@include min768 {
+			padding: 0;			
+		}
 
 		&::after {
 			content: '';
@@ -20,16 +29,24 @@
 	}
 
 	&__img {
-		position: absolute;
-		max-width: 470px;
-		transform: translate(15px, -25%);
 		box-shadow: 0 0 10px 0 rgba($black-color, .3);
+		max-width: 100%;
+
+		@include min768 {
+			position: absolute;
+			max-width: 470px;	
+			transform: translate(15px, -25%);
+		}
 	}
 
 	
 
 	&__text-content {
-		padding-left: 65px; 
+
+		@include min768 {
+			padding-left: 65px; 	
+		}
+		
 	}
 
 	&__text {
