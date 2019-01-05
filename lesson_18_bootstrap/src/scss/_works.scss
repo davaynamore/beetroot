@@ -2,12 +2,21 @@
 	padding-top: 40px;
 
 	&__nav {
+		padding-top: 1rem;
+
+		@include min992 {
+			padding-top: 0;
+		}		
 
 		&-list {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			height: 69px;
+
+			@include min992 {
+				height: 69px;	
+			}
+			
 		}
 
 		&-item {
@@ -31,6 +40,11 @@
 
 	&__content {
 		position: relative;
+		padding-top: 1rem;
+
+		@include min992 {
+			padding-top: 0;
+		}
 	}
 
 	.grid {
