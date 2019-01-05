@@ -3,6 +3,7 @@
 	&__list{
 		min-height: 285px;
 		align-items: center;
+		display: flex;
 	}
 
 	&__link{
@@ -12,4 +13,9 @@
 	&__logo {
 		opacity: .5;
 	}
+}
+
+
+.slick-slide img {
+	display: inline;
 }

@@ -1,6 +1,8 @@
 .speech {
-	padding-top: rem(290px);
-	padding-bottom: rem(45px);
+
+	@include min992 {
+		padding-top: rem(290px);
+	}
 
 	.section-title {
 		z-index: -1;
@@ -9,6 +11,9 @@
 	&__content {
 		background-color: $pink-color;
 		position: relative;
+		padding-left: 15px;
+		padding-right: 15px;
+		// overflow: hidden;
 	}
 
 	&__height {
@@ -45,5 +50,24 @@
 	&__author {
 		text-transform: capitalize;
 		font-weight: bold;
+	}
+
+	.carousel-controls {
+		$position: 6rem;
+		position: relative;
+		bottom: $position;
+		right: $position;
+	}
+
+
+	.carousel-control-prev,
+	.carousel-control-next {
+		max-width: 20px;
+		z-index: 3;
+	}
+
+	.carousel-control-prev {
+		right: 20px;
+		left: initial;
 	}
 }
