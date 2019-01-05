@@ -1,19 +1,13 @@
 .about {
-	padding-top: 20%;
 
-	@include min576 {
-		padding-top: rem(150px);		
-	}
-
-	@include min992 {
-		padding-top: rem(200px);	
+	@include min992{
+		padding-top: 17rem;
 	}
 
 	&__row {
 		position: relative;
 		z-index: 2;
 	}
-
 
 	&__content {
 		background-size: cover;

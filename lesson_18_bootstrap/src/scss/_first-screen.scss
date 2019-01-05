@@ -6,12 +6,12 @@
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 100vh;
 	z-index: 2;
 	padding-top: 15px;
 
 	@include min768 {
-		padding-top: 40px;	
+		padding-top: 40px;
+		min-height: 100vh;	
 	}
 
 	$paddingTop: 80px;	

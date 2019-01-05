@@ -1,10 +1,9 @@
 .works {
-	padding-top: 40px;
 
 	&__nav {
 		padding-top: 1rem;
 
-		@include min992 {
+		@include min768 {
 			padding-top: 0;
 		}		
 
@@ -13,14 +12,14 @@
 			justify-content: space-between;
 			align-items: center;
 
-			@include min992 {
+			@include min768 {
 				height: 69px;	
 			}
 			
 		}
 
 		&-item {
-
+			
 		}
 
 		&-link {
@@ -28,12 +27,16 @@
 			text-transform: capitalize;
 			color: $white-color;
 			opacity: .5;
-			font-size: rem(14px);
-			letter-spacing: 1px;
+			font-size: rem(13px);
 			&:hover,
 			&.active{
 				color: $white-color;
 				opacity: 1;
+			}
+
+			@include min768 {
+				font-size: rem(14px);
+				letter-spacing: 1px;
 			}
 		}
 	}
@@ -42,7 +45,7 @@
 		position: relative;
 		padding-top: 1rem;
 
-		@include min992 {
+		@include min768 {
 			padding-top: 0;
 		}
 	}
@@ -51,21 +54,48 @@
 		$margin-size: 7px;
 		display: flex;
 		margin-bottom: $margin-size;
+		flex-direction: column;
+		padding-left: 15px;
+		padding-right: 15px;
+
 		&:last-child{
-			margin-bottom: 0;
+			display: none;
 		}
+
+		@include min768 {
+			flex-direction: row;
+			padding-left: 0;
+			padding-right: 0;
+
+			&:last-child{
+				display: flex;
+				margin-bottom: 0;
+			}
+		}
+
 		&__item {
-			flex-grow: 2;
+			
 			position: relative;
-			padding-top: 20%;
-			margin-right: $margin-size;
+			padding-top: 100%;
+			margin-bottom: .5rem;
+
+			@include min768 {
+				flex-grow: 2;
+				padding-top: 20%;
+				margin-bottom: 0;
+				margin-right: $margin-size;
+			}
 
 			&:last-child{
 				margin-right: 0;
+				margin-bottom: 0;
 			}
 
 			&.large {
-				flex-grow: 3;
+
+				@include min768 {
+					flex-grow: 3;
+				}
 			}			
 		}
 

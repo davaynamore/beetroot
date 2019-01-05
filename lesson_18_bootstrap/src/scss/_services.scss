@@ -1,17 +1,11 @@
 .services {
 	position: relative;
 
-	@include max991 {
-		padding-top: rem(150px);
-	}
-
-
 	&__content {
 		position: relative;
 	}
 
 	.grid-item {
-		
 
 		&__title {
 			display: flex;
@@ -46,7 +40,6 @@
 			font-weight: 200;
 			letter-spacing: 1px;
 			margin-bottom: rem(16px);
-			min-height: 100px;
 
 			@include min576 {
 				margin-bottom: rem(30px);

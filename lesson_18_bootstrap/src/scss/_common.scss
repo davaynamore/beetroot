@@ -28,11 +28,6 @@ ul {
 	} 
 }
 
-section {
-	position: relative;
-	z-index: 1;
-}
-
 .arrow-link {
 	font-size: rem(18px);
 	letter-spacing: 1px;
@@ -80,10 +75,14 @@ section {
 	top: 0;
 	transform: translateY(-150%);
 	opacity: 0.3;
+	left: 0;
+	width: 100%;
 
 	@include min768 {
 		opacity: 0.05;
 		transform: translateY(-76%);
+		left: initial;
+		width: auto;		
 	}
 
 	& * {
@@ -92,9 +91,11 @@ section {
 		text-transform: uppercase;
 		line-height: 1;
 		margin: 0;
+		text-align: center;
 
 		@include min768 {
 			font-size: rem(91px);
+			text-align: initial;
 		}
 	}
 }
@@ -242,5 +243,15 @@ section {
 			flex-grow: 2;
 			align-items: center;	
 		}
+	}
+}
+
+.section {
+	margin-bottom: 6rem;
+	position: relative;
+	z-index: 1;
+
+	@include min992 {
+		margin-bottom: 0;		
 	}
 }
