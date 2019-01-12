@@ -9,3 +9,33 @@
 @import 'partners';
 @import 'contact';
 @import 'footer';
+
+
+// #style {
+// 	$size: 100px;
+// 	width: $size;
+// 	height: $size;
+// 	background-color: red;
+// 	position: relative;
+// 	z-index: 100000000;
+// 	transition: transform .4s ease;
+
+// 	&::after {
+// 		content: "";
+// 		position: absolute;
+// 		top: 0;
+// 		right: 0;
+// 		bottom: 0;
+// 		left: 0;
+// 		background-color: blue;
+// 		opacity: 0;
+// 		transition: opacity .4s ease;
+// 	}
+
+// 	&:hover {
+// 		transform: scale(1.2);
+// 		&::after {
+// 			opacity: 1;
+// 		}
+// 	}
+// }
