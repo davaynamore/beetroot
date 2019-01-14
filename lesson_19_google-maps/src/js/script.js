@@ -2,18 +2,19 @@ const navForm = document.getElementById('navigator');
 const addressFrom = document.getElementById('addressFrom');
 const addressTo = document.getElementById('addressTo');
 const drivingMode = document.getElementById('drivingMode');
+let map;
+let directionsService;
+let directionsDisplay;
+const markersArray = [];
 
 navForm.addEventListener('submit', (e) => {
 	e.preventDefault();
+	clearOverlays();
 	const start = addressFrom.value;
 	const end = addressTo.value;
 	const mode = drivingMode.value;
 	start && end ? calcRoute(start, end, mode) : start ? findPoint(start) :  end ? findPoint(end) : alert('Enter address');
 });
-
-let map;
-let directionsService;
-let directionsDisplay;
 
 function initMap() {
 	directionsService = new google.maps.DirectionsService();
@@ -30,10 +31,7 @@ function findPoint(address) {
 		if (status == 'OK') {
 			map.zoom = 12;
 			map.setCenter(results[0].geometry.location);
-			const marker = new google.maps.Marker({
-				map: map,
-				position: results[0].geometry.location
-			});
+			const marker = addMarker(results[0].geometry.location)
 			infowindow.setContent(results[0].formatted_address);
 			infowindow.open(map, marker);
 		} else {
@@ -42,8 +40,8 @@ function findPoint(address) {
 	});
 }
 
-
 function calcRoute(start, end, drivingMode) {
+	directionsDisplay.setMap(map);
 	var request = {
 		origin: start,
 		destination: end,
@@ -54,4 +52,42 @@ function calcRoute(start, end, drivingMode) {
 			directionsDisplay.setDirections(result);
 		}
 	});
+}
+
+function addMarker(location) {
+	const marker = new google.maps.Marker({
+		position: location,
+		map: map
+	});
+	markersArray.push(marker);
+	return marker;
+}
+
+// Removes the overlays from the map, but keeps them in the array
+function clearOverlays() {
+	directionsDisplay.setMap(null);
+	if (markersArray) {
+		for (let i in markersArray) {
+			markersArray[i].setMap(null);
+		}
+	}
+}
+
+// Shows any overlays currently in the array
+function showOverlays() {
+	if (markersArray) {
+		for (let i in markersArray) {
+			markersArray[i].setMap(map);
+		}
+	}
+}
+
+// Deletes all markers in the array by removing references to them
+function deleteOverlays() {
+	if (markersArray) {
+		for (let i in markersArray) {
+			markersArray[i].setMap(null);
+		}
+		markersArray.length = 0;
+	}
 }
