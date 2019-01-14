@@ -25,13 +25,17 @@ function initMap() {
 
 function findPoint(address) {
 	const geocoder = new google.maps.Geocoder();
+	const infowindow = new google.maps.InfoWindow;
 	geocoder.geocode( { 'address': address}, function(results, status) {
 		if (status == 'OK') {
+			map.zoom = 12;
 			map.setCenter(results[0].geometry.location);
 			const marker = new google.maps.Marker({
 				map: map,
 				position: results[0].geometry.location
 			});
+			infowindow.setContent(results[0].formatted_address);
+			infowindow.open(map, marker);
 		} else {
 			console.log('Geocode was not successful for the following reason: ' + status);
 		}
@@ -40,14 +44,14 @@ function findPoint(address) {
 
 
 function calcRoute(start, end, drivingMode) {
-  var request = {
-  	origin: start,
-  	destination: end,
-  	travelMode: drivingMode
-  };
-  directionsService.route(request, function(result, status) {
-  	if (status == 'OK') {
-  		directionsDisplay.setDirections(result);
-  	}
-  });
+	var request = {
+		origin: start,
+		destination: end,
+		travelMode: drivingMode
+	};
+	directionsService.route(request, function(result, status) {
+		if (status == 'OK') {
+			directionsDisplay.setDirections(result);
+		}
+	});
 }
