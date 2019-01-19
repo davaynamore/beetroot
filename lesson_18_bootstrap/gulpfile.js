@@ -1,6 +1,7 @@
 'use strict';
 
 const gulp = require('gulp'),
+// plugins = require('gulp-load-plugins')(),
 autoprefixer = require('gulp-autoprefixer'),
 notify = require('gulp-notify'),
 sass = require('gulp-sass'),
@@ -8,6 +9,7 @@ sourcemaps = require('gulp-sourcemaps'),
 clean = require('gulp-clean'),
 babel = require('gulp-babel'),
 uglify = require('gulp-uglify'),
+imgmin = require('gulp-imagemin'),
 browserSync = require('browser-sync').create();
 
 
@@ -36,16 +38,23 @@ gulp.task('js', () => {
  return gulp.src('src/js/**/*.js')
  .pipe(sourcemaps.init())
  .pipe(babel({
-            presets: ['@babel/env']
-        }).on('error', notify.onError("JS-babel-Error: <%= error.message %>")))
+  presets: ['@babel/env']
+}).on('error', notify.onError("JS-babel-Error: <%= error.message %>")))
  // .pipe(uglify().on('error', notify.onError("JS-uglify-Error: <%= error.message %>")))
  .pipe(sourcemaps.write())
  .pipe(gulp.dest('app/js'))
  .pipe(browserSync.stream());
 });
 
-gulp.task('img', () => {
+gulp.task('img:dev', () => {
  return gulp.src('src/img/**/*.*')
+ .pipe(gulp.dest('app/img'))
+ .pipe(browserSync.stream());
+});
+
+gulp.task('img:prod', () => {
+ return gulp.src('src/img/**/*.*')
+ .pipe(imgmin())
  .pipe(gulp.dest('app/img'))
  .pipe(browserSync.stream());
 });
@@ -87,7 +96,9 @@ gulp.task('clean', function () {
   }));
 });
 
-gulp.task('developing', ['watch', 'html', 'js', 'libs', 'img', 'fonts', 'sass', 'connect']);
+gulp.task('developing', ['watch', 'html', 'js', 'libs', 'img:dev', 'fonts', 'sass', 'connect']);
+
+gulp.task('prod', ['watch', 'html', 'js', 'libs', 'img:prod', 'fonts', 'sass', 'connect']);
 
 gulp.task('default', ['clean'], () => {
   gulp.start('developing');
