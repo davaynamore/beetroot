@@ -1,97 +1,93 @@
+const navForm = document.getElementById('navigator');
+const addressFrom = document.getElementById('addressFrom');
+const addressTo = document.getElementById('addressTo');
+const drivingMode = document.getElementById('drivingMode');
+let map;
+let directionsService;
+let directionsDisplay;
+const markersArray = [];
+
+navForm.addEventListener('submit', (e) => {
+	e.preventDefault();
+	clearOverlays();
+	const start = addressFrom.value;
+	const end = addressTo.value;
+	const mode = drivingMode.value;
+	start && end ? calcRoute(start, end, mode) : start ? findPoint(start) :  end ? findPoint(end) : alert('Enter address');
+});
+
 function initMap() {
-	const uluru = {lat: 49.066618, lng: 33.413652};
-	const map = new google.maps.Map(
-		document.getElementById('map'), {
-			zoom: 17,
-			center: uluru,
-			zoomControl: false,
-			mapTypeControl: false,
-			scaleControl: false,
-			streetViewControl: false,
-			rotateControl: false,
-			fullscreenControl: false,
-			styles: [
-			{elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-			{elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-			{elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-			{
-				featureType: 'administrative.locality',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#d59563'}]
-			},
-			{
-				featureType: 'poi',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#d59563'}]
-			},
-			{
-				featureType: 'poi.park',
-				elementType: 'geometry',
-				stylers: [{color: '#263c3f'}]
-			},
-			{
-				featureType: 'poi.park',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#6b9a76'}]
-			},
-			{
-				featureType: 'road',
-				elementType: 'geometry',
-				stylers: [{color: '#38414e'}]
-			},
-			{
-				featureType: 'road',
-				elementType: 'geometry.stroke',
-				stylers: [{color: '#212a37'}]
-			},
-			{
-				featureType: 'road',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#9ca5b3'}]
-			},
-			{
-				featureType: 'road.highway',
-				elementType: 'geometry',
-				stylers: [{color: '#746855'}]
-			},
-			{
-				featureType: 'road.highway',
-				elementType: 'geometry.stroke',
-				stylers: [{color: '#1f2835'}]
-			},
-			{
-				featureType: 'road.highway',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#f3d19c'}]
-			},
-			{
-				featureType: 'transit',
-				elementType: 'geometry',
-				stylers: [{color: '#2f3948'}]
-			},
-			{
-				featureType: 'transit.station',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#d59563'}]
-			},
-			{
-				featureType: 'water',
-				elementType: 'geometry',
-				stylers: [{color: '#17263c'}]
-			},
-			{
-				featureType: 'water',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#515c6d'}]
-			},
-			{
-				featureType: 'water',
-				elementType: 'labels.text.stroke',
-				stylers: [{color: '#17263c'}]
-			}
-			]
-		});
-	const marker = new google.maps.Marker({position: uluru, map: map});
+	directionsService = new google.maps.DirectionsService();
+	directionsDisplay = new google.maps.DirectionsRenderer();
+	const krem = {lat: 49.062785, lng: 33.4156805};
+	map = new google.maps.Map(document.getElementById('map'), {zoom: 7, center: krem});
+	directionsDisplay.setMap(map);
+}
 
+function findPoint(address) {
+	const geocoder = new google.maps.Geocoder();
+	const infowindow = new google.maps.InfoWindow;
+	geocoder.geocode( { 'address': address}, function(results, status) {
+		if (status == 'OK') {
+			map.zoom = 12;
+			map.setCenter(results[0].geometry.location);
+			const marker = addMarker(results[0].geometry.location)
+			infowindow.setContent(results[0].formatted_address);
+			infowindow.open(map, marker);
+		} else {
+			console.log('Geocode was not successful for the following reason: ' + status);
+		}
+	});
+}
 
+function calcRoute(start, end, drivingMode) {
+	directionsDisplay.setMap(map);
+	var request = {
+		origin: start,
+		destination: end,
+		travelMode: drivingMode
+	};
+	directionsService.route(request, function(result, status) {
+		if (status == 'OK') {
+			directionsDisplay.setDirections(result);
+		}
+	});
+}
+
+function addMarker(location) {
+	const marker = new google.maps.Marker({
+		position: location,
+		map: map
+	});
+	markersArray.push(marker);
+	return marker;
+}
+
+// Removes the overlays from the map, but keeps them in the array
+function clearOverlays() {
+	directionsDisplay.setMap(null);
+	if (markersArray) {
+		for (let i in markersArray) {
+			markersArray[i].setMap(null);
+		}
+	}
+}
+
+// Shows any overlays currently in the array
+function showOverlays() {
+	if (markersArray) {
+		for (let i in markersArray) {
+			markersArray[i].setMap(map);
+		}
+	}
+}
+
+// Deletes all markers in the array by removing references to them
+function deleteOverlays() {
+	if (markersArray) {
+		for (let i in markersArray) {
+			markersArray[i].setMap(null);
+		}
+		markersArray.length = 0;
+	}
 }
