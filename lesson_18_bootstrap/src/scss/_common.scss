@@ -327,3 +327,42 @@ ul {
 		cursor: pointer;
 	}
 }
+
+#map {
+	min-height: 100vh;
+}
+
+.animate-label {
+	$size: 90px;
+	min-width: 320px;
+	background-color: rgba($white-color, .5);
+	position: fixed;
+	right: 0;
+	top: 20%;
+	display: flex;
+	cursor: pointer;
+	@include z-index(label);
+	transform: translateX(calc(100% - #{$size}));
+	will-change: transform;
+	transition: transform .4s ease;
+
+	&:hover {
+		transform: translateX(0);
+	}
+
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: $size;
+	}
+
+	.icon {
+		width: $size;
+		background-color: red;
+	}
+
+	.address {
+		width: calc(100% - #{$size});
+	}
+}
