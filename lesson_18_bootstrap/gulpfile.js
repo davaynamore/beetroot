@@ -102,10 +102,10 @@ gulp.task('fonts', () => {
 });
 
 gulp.task('watch', () => {
- gulp.watch('src/scss/**/*.scss', ['sass']),
- gulp.watch('src/index.html',['html']),
- gulp.watch('src/js/**/*.js',['js']),
- gulp.watch('src/img/**/*.*',['img']),
+ gulp.watch('src/scss/**/*.scss', ['sass:dev']),
+ gulp.watch('src/index.html',['html:dev']),
+ gulp.watch('src/js/**/*.js',['js:dev']),
+ gulp.watch('src/img/**/*.*',['img:dev']),
  gulp.watch('src/fonts/**/*.*',['fonts'])
 });
 
@@ -128,8 +128,12 @@ gulp.task('clean', () => {
 
 gulp.task('dev', ['watch', 'html:dev', 'js:dev', 'libs', 'img:dev', 'fonts', 'sass:dev', 'connect']);
 
-gulp.task('prod', ['watch', 'html:prod', 'js:prod', 'libs', 'img:prod', 'fonts', 'sass:prod', 'connect']);
+gulp.task('production', ['html:prod', 'js:prod', 'libs', 'img:prod', 'fonts', 'sass:prod']);
 
 gulp.task('default', ['clean'], () => {
   gulp.start('dev');
+});
+
+gulp.task('prod', ['clean'], () => {
+  gulp.start('production');
 });
